@@ -1,0 +1,180 @@
+.mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: white;
+    z-index: 1999;
+    overflow-y: auto;
+  }
+  
+  .mobile-menu-content {
+    padding: 20px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobile-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+  }
+  
+  .mobile-menu-item {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .mobile-menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  .mobile-menu-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    flex: 1;
+  }
+  
+  .mobile-submenu-toggle {
+    background: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-submenu-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .mobile-submenu-toggle svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-submenu-toggle.active svg {
+    transform: rotate(180deg);
+  }
+  
+  .mobile-submenu {
+    padding: 0 20px 20px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .mobile-submenu-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .mobile-submenu-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .mobile-submenu-list {
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+  }
+  
+  .mobile-submenu-item {
+    margin-bottom: 12px;
+  }
+  
+  .mobile-submenu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-submenu-link:hover {
+    background-color: rgba(0, 82, 255, 0.05);
+  }
+  
+  .mobile-submenu-icon {
+    margin-right: 12px;
+    color: #0052FF;
+  }
+  
+  .mobile-submenu-content {
+    flex: 1;
+  }
+  
+  .mobile-submenu-item-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+  }
+  
+  .mobile-submenu-item-description {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+  }
+  
+  .mobile-submenu-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 0;
+  }
+  
+  .mobile-submenu-section-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .mobile-submenu-section-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-submenu-section-link:hover {
+    background-color: rgba(0, 82, 255, 0.05);
+  }
+  
+  .mobile-submenu-section-link svg {
+    margin-right: 8px;
+    color: #0052FF;
+  }
+  
+  .mobile-menu-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+  }
+  
+  .mobile-contact-btn {
+    width: 100%;
+  }
