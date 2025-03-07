@@ -51,7 +51,7 @@ const Testimonials = () => {
     const handlePrev = () => {
         setSlideDirection('slide-right');
         setTimeout(() => {
-            setActiveIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+            setActiveIndex((prevIndex) => (prevIndex === 0 ? testimonies.length - 1 : prevIndex - 1));
             setSlideDirection('');
         }, 300);
     };
@@ -59,7 +59,7 @@ const Testimonials = () => {
     const handleNext = () => {
         setSlideDirection('slide-left');
         setTimeout(() => {
-            setActiveIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+            setActiveIndex((prevIndex) => (prevIndex === testimonies.length - 1 ? 0 : prevIndex + 1));
             setSlideDirection('');
         }, 300);
     };
