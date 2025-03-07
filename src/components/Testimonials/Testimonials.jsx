@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './styles/Testimonials.css';
-// import testimonies from './testimonies';
 import testimonies from './testimonies'
 
 

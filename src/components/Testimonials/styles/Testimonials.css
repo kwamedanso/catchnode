@@ -196,8 +196,11 @@
   
   .testimonials-title {
     font-size: 2rem;
+    text-align: center;
   }
-  
+  .testimonials-nav{
+   justify-content: center;
+  }
   .testimonial-card {
     padding: 30px;
   }
