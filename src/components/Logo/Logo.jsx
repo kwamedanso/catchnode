@@ -1,12 +1,14 @@
 import React from 'react';
 import './styles/Logo.css';
+import { TbNavigationFilled } from "react-icons/tb";
+
 
 const Logo = () => {
     return (
         <a href="/" className="logo-link">
             <div className="logo">
                 <span className="logo-text">NaviTek</span>
-                <span className="logo-triangle"></span>
+                <TbNavigationFilled className='logo-svg-icon' />
             </div>
         </a>
     );

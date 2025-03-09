@@ -16,14 +16,9 @@
     color: white;
     letter-spacing: 1px;
   }
-  
-  .logo-triangle {
-    position: relative;
-    width: 0;
-    height: 0;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 12px solid #0052FF;
-    margin-left: 5px;
-    margin-top: -8px;
+
+  .logo-svg-icon{
+    color: #0052ff;
+    align-self: start;
+    transform: rotate(35deg);
   }
