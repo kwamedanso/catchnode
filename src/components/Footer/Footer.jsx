@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/Footer.css';
 import LogoWithTriangle from './LogoWithTriangle';
 
+
 const Footer = () => {
     return (
         <footer className="footer">
