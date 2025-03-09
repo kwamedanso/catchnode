@@ -1,6 +1,9 @@
 import React from 'react';
 import './styles/Dropdown.css';
-import Icon from '../Icon/Icon';
+import { FiArrowRight } from "react-icons/fi";
+import { RiShareBoxFill } from "react-icons/ri";
+
+
 
 const Dropdown = ({ items, industriesSection, technologiesSection }) => {
     return (
@@ -9,7 +12,7 @@ const Dropdown = ({ items, industriesSection, technologiesSection }) => {
                 <div className="dropdown-main-section">
                     <div className="dropdown-header">
                         <span className="dropdown-title">SERVICES</span>
-                        <Icon name="arrow-right" />
+                        <FiArrowRight />
                     </div>
                     <div className="dropdown-items">
                         {items.map((item, index) => (
@@ -21,13 +24,13 @@ const Dropdown = ({ items, industriesSection, technologiesSection }) => {
                                 rel={item.isExternal ? "noopener noreferrer" : ""}
                             >
                                 <div className="dropdown-item-icon">
-                                    <Icon name={item.icon} />
+                                    <item.icon />
                                 </div>
                                 <div className="dropdown-item-content">
                                     <h3 className="dropdown-item-title">{item.title}</h3>
                                     <p className="dropdown-item-description">{item.description}</p>
                                 </div>
-                                {item.isExternal && <Icon name="external-link" />}
+                                {item.isExternal && <RiShareBoxFill />}
                             </a>
                         ))}
                     </div>
@@ -42,7 +45,7 @@ const Dropdown = ({ items, industriesSection, technologiesSection }) => {
                             <div className="dropdown-additional-items">
                                 {industriesSection.items.map((item, index) => (
                                     <a key={index} href={item.path} className="dropdown-additional-item">
-                                        <Icon name={item.icon} />
+                                        <item.icon />
                                         <span>{item.title}</span>
                                     </a>
                                 ))}
@@ -58,7 +61,7 @@ const Dropdown = ({ items, industriesSection, technologiesSection }) => {
                             <div className="dropdown-additional-items">
                                 {technologiesSection.items.map((item, index) => (
                                     <a key={index} href={item.path} className="dropdown-additional-item">
-                                        <Icon name={item.icon} />
+                                        <item.icon />
                                         <span>{item.title}</span>
                                     </a>
                                 ))}
