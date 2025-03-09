@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './styles/MobileMenu.css';
 import Icon from '../Icon/Icon';
+import { IoIosArrowDown } from "react-icons/io";
+
 
 const MobileMenu = ({ isOpen, navItems }) => {
     const [expandedItems, setExpandedItems] = useState({});
@@ -39,7 +41,7 @@ const MobileMenu = ({ isOpen, navItems }) => {
                                         onClick={() => toggleSubmenu(index)}
                                         aria-label={expandedItems[index] ? "Collapse submenu" : "Expand submenu"}
                                     >
-                                        <Icon name="chevron-down" />
+                                        <IoIosArrowDown />
                                     </button>
                                 )}
                             </div>
@@ -54,7 +56,7 @@ const MobileMenu = ({ isOpen, navItems }) => {
                                             <li key={childIndex} className="mobile-submenu-item">
                                                 <a href={child.path} className="mobile-submenu-link">
                                                     <div className="mobile-submenu-icon">
-                                                        <Icon name={child.icon} />
+                                                        <child.icon />
                                                     </div>
                                                     <div className="mobile-submenu-content">
                                                         <h3 className="mobile-submenu-item-title">{child.title}</h3>
@@ -74,7 +76,7 @@ const MobileMenu = ({ isOpen, navItems }) => {
                                                 {item.industriesSection.items.map((industry, industryIndex) => (
                                                     <li key={industryIndex} className="mobile-submenu-section-item">
                                                         <a href={industry.path} className="mobile-submenu-section-link">
-                                                            <Icon name={industry.icon} />
+                                                            <industry.icon />
                                                             <span>{industry.title}</span>
                                                         </a>
                                                     </li>
@@ -92,7 +94,7 @@ const MobileMenu = ({ isOpen, navItems }) => {
                                                 {item.technologiesSection.items.map((tech, techIndex) => (
                                                     <li key={techIndex} className="mobile-submenu-section-item">
                                                         <a href={tech.path} className="mobile-submenu-section-link">
-                                                            <Icon name={tech.icon} />
+                                                            <tech.icon />
                                                             <span>{tech.title}</span>
                                                         </a>
                                                     </li>

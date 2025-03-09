@@ -92,7 +92,7 @@ export const NavData = [
             },
             {
                 title: 'Design Services',
-                description: '* The Dept. – part of TechPlanet',
+                description: '* The Dept. – part of NaviTek',
                 path: '/services/design-services',
                 icon: FaStarOfLife,
                 isExternal: true

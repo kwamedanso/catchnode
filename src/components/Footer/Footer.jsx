@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="footer-main">
                     <div className="footer-logo">
                         <LogoWithTriangle />
-                        <p className="footer-contact">contact@techplanet.com</p>
+                        <p className="footer-contact">contact@navitek.com</p>
                     </div>
 
                     <div className="footer-links">

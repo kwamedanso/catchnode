@@ -8,6 +8,7 @@
     background-color: white;
     z-index: 1999;
     overflow-y: auto;
+    animation: slideDown 0.5s ease forwards;
   }
   
   .mobile-menu-content {
@@ -97,8 +98,9 @@
   }
   
   .mobile-submenu-link {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .5rem;
     text-decoration: none;
     color: #333;
     padding: 10px;
@@ -111,8 +113,15 @@
   }
   
   .mobile-submenu-icon {
-    margin-right: 12px;
+    border: 1px solid gainsboro;
+    aspect-ratio: 1/1;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #0052FF;
+    font-size: 1.25rem;
   }
   
   .mobile-submenu-content {
@@ -156,7 +165,7 @@
     color: #333;
     padding: 8px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 15px;
     transition: background-color 0.3s ease;
   }
   
@@ -167,6 +176,7 @@
   .mobile-submenu-section-link svg {
     margin-right: 8px;
     color: #0052FF;
+    font-size: 1.1rem;
   }
   
   .mobile-menu-footer {
@@ -177,4 +187,15 @@
   
   .mobile-contact-btn {
     width: 100%;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
