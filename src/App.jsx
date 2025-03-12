@@ -9,6 +9,7 @@ import CallToAction from './components/CallToAction/CallToAction'
 import Footer from './components/Footer/Footer';
 import FaqSection from './components/FaqSection/FaqSection';
 import OurWorksSection from './components/OurWorksSection/OurWorksSection';
+import Templates from './components/Templates/Templates';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <HeroSection />
       <ServicesSection />
       <OurWorksSection />
+      <Templates />
       <Testimonials />
       <ImageCarousel />
       <FaqSection />
