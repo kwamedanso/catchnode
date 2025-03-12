@@ -1,0 +1,198 @@
+/* OurWorkCard.css */
+
+.our-work-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
+}
+
+.our-work-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.our-work-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-text {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.card-text p {
+  color: #666;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  background-color: #f5f5f5;
+  color: #555;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.view-portfolio-link {
+  color: #5850ec;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.view-portfolio-link:hover {
+  color: #4338ca;
+}
+
+.view-portfolio-link .arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.view-portfolio-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+.card-image-container {
+  flex: 1.2;
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f9fb;
+  min-height: 400px;
+  padding: 20px 0;
+}
+
+.card-image-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.card-image {
+  min-width: 100%;
+  flex: 1 0 100%;
+  height: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* opacity: 0; */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* This ensures clicks pass through to the image when not on buttons */
+}
+
+.card-image-container:hover .image-controls {
+  opacity: 1;
+}
+
+.control-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  pointer-events: auto; /* This ensures buttons can be clicked */
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.control-button:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.control-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .card-content {
+    flex-direction: column;
+  }
+  
+  .card-image-container {
+    min-height: 300px;
+    order: 2;
+  }
+  
+  .card-text {
+    order: 1;
+    padding: 30px;
+  }
+  
+  .card-text h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-text {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-image-container {
+    min-height: 250px;
+  }
+  
+  .tag {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .view-portfolio-link {
+    font-size: 14px;
+  }
+}
