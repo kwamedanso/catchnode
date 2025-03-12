@@ -1,6 +1,7 @@
 .testimonials-section {
   padding: 80px 0;
   background-color: #fff;
+  margin: 0 5rem;
 }
 
 .testimonials-container {
@@ -192,6 +193,7 @@
 @media screen and (max-width: 576px) {
   .testimonials-section {
     padding: 60px 0;
+    margin: 0 .5rem;
   }
   
   .testimonials-title {
