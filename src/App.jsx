@@ -1,14 +1,14 @@
 import React from 'react';
+import './App.css';
 import Header from './components/Header/Header';
 import HeroSection from './components/HeroSection/HeroSection';
-import './App.css';
 import ServicesSection from './components/ServicesSection/ServicesSection';
-import CaseStudySection from './components/CaseStudySection/CaseStudySection';
 import Testimonials from './components/Testimonials/Testimonials';
 import ImageCarousel from './components/ImageCarousel/ImageCarousel';
 import CallToAction from './components/CallToAction/CallToAction'
 import Footer from './components/Footer/Footer';
 import FaqSection from './components/FaqSection/FaqSection';
+import OurWorksSection from './components/OurWorksSection/OurWorksSection';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <HeroSection />
       <ServicesSection />
-      <CaseStudySection />
+      <OurWorksSection />
       <Testimonials />
       <ImageCarousel />
       <FaqSection />
