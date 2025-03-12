@@ -6,6 +6,12 @@
   position: relative;
 }
 
+.image-carousel-title{
+  margin: 1rem .4rem 2.5rem .4rem;
+  text-align: center;
+  color: rgb(39, 38, 38);
+}
+
 .carousel-track-container {
   width: 100%;
   overflow: hidden;

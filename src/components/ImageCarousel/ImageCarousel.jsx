@@ -54,6 +54,7 @@ const ImageCarousel = () => {
 
     return (
         <div className="image-carousel">
+            <h4 className='image-carousel-title'>We're proud partners with the industry's leading tech companies.</h4>
             <div className="carousel-track-container">
                 <div className="carousel-track" ref={carouselRef}>
                     {duplicatedLogos.map((logo, index) => (
