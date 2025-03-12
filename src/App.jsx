@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import FaqSection from './components/FaqSection/FaqSection';
 import OurWorksSection from './components/OurWorksSection/OurWorksSection';
 import Templates from './components/Templates/Templates';
+import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <ServicesSection />
       <OurWorksSection />
       <Templates />
+      <WhyChooseUs />
       <Testimonials />
       <ImageCarousel />
       <FaqSection />
