@@ -185,9 +185,10 @@
     margin-top: auto;
   }
   
-  .mobile-contact-btn {
+  /* .mobile-contact-btn {
     width: 100%;
-  }
+    display: none;
+  } */
 
   @keyframes slideDown {
     from {

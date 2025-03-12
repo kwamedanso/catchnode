@@ -108,11 +108,11 @@ const MobileMenu = ({ isOpen, navItems }) => {
                     ))}
                 </ul>
 
-                <div className="mobile-menu-footer">
+                {/* <div className="mobile-menu-footer">
                     <a href="/contact" className="btn btn-primary mobile-contact-btn">
                         Contact us
                     </a>
-                </div>
+                </div> */}
             </div>
         </div>
     );
