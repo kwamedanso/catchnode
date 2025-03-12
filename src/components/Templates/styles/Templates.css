@@ -1,7 +1,7 @@
 /* Templates.css */
 .templates-section {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 5rem;
     padding: 60px 20px;
     text-align: center;
     opacity: 0;
@@ -90,6 +90,9 @@
   }
   
   @media screen and (max-width: 640px) {
+    .templates-section{
+        margin: 0 .5rem;
+    }
     .templates-title {
       font-size: 28px;
     }
