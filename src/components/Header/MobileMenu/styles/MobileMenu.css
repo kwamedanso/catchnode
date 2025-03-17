@@ -87,6 +87,10 @@
     letter-spacing: 1px;
   }
   
+  .mobile-submenu-title a{
+    text-decoration: none;
+    color: #666;
+  }
   .mobile-submenu-list {
     list-style: none;
     margin: 15px 0;

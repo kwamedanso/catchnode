@@ -72,6 +72,7 @@ const Header = () => {
             <MobileMenu
                 isOpen={isMobileMenuOpen}
                 navItems={NavData}
+                setIsMobileMenuOpen={setIsMobileMenuOpen}
             />
         </header>
     );

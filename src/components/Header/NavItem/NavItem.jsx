@@ -58,6 +58,7 @@ const NavItem = ({ item }) => {
                     items={item.children}
                     industriesSection={item.industriesSection}
                     technologiesSection={item.technologiesSection}
+                    setIsDropdownOpen={setIsDropdownOpen}
                 />
             )}
         </li>

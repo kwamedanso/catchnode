@@ -2,16 +2,23 @@ import React from 'react';
 import './styles/Dropdown.css';
 import { FiArrowRight } from "react-icons/fi";
 import { RiShareBoxFill } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 
 
-const Dropdown = ({ items, industriesSection, technologiesSection }) => {
+const Dropdown = ({ items, industriesSection, technologiesSection, setIsDropdownOpen }) => {
+
+    function closeDropDown() {
+        setIsDropdownOpen(false)
+    }
     return (
         <div className="dropdown">
             <div className="dropdown-content">
                 <div className="dropdown-main-section">
                     <div className="dropdown-header">
-                        <span className="dropdown-title">SERVICES</span>
+                        <Link to="/services" className='dropdown-title' onClick={closeDropDown}>
+                            SERVICES
+                        </Link>
                         <FiArrowRight />
                     </div>
                     <div className="dropdown-items">

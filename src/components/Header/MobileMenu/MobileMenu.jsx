@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import './styles/MobileMenu.css';
-// import Icon from '../Icon/Icon';
 import { IoIosArrowDown } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 
-const MobileMenu = ({ isOpen, navItems }) => {
+const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
     const [expandedItems, setExpandedItems] = useState({});
 
+    function closeMobileMenu(paams) {
+        setIsMobileMenuOpen(false)
+    }
     const toggleSubmenu = (index) => {
         setExpandedItems(prev => ({
             ...prev,
@@ -49,7 +52,7 @@ const MobileMenu = ({ isOpen, navItems }) => {
                             {item.hasChildren && expandedItems[index] && (
                                 <div className="mobile-submenu">
                                     <div className="mobile-submenu-header">
-                                        <span className="mobile-submenu-title">{item.title.toUpperCase()} &rarr;</span>
+                                        <span className="mobile-submenu-title"><Link to='/services' onClick={closeMobileMenu}>{item.title.toUpperCase()} &rarr;</Link></span>
                                     </div>
                                     <ul className="mobile-submenu-list">
                                         {item.children.map((child, childIndex) => (

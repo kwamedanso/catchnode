@@ -44,6 +44,20 @@
     align-items: center;
     margin-bottom: 15px;
   }
+
+  .dropdown-header a{
+    /* text-decoration: none; */
+    text-underline-offset: "10px";
+  }
+
+
+
+  .dropdown-header:hover a{
+    text-decoration: underline;
+  }
+  .dropdown-header:hover svg{
+    transform: translateX(5px);
+  }
   
   .dropdown-title {
     font-size: 14px;

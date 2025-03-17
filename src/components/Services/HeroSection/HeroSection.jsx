@@ -4,31 +4,13 @@ import ContactModal from '../ContactModal/ContactModal';
 import './HeroSection.css';
 
 const HeroSection = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const heroRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
-
-        if (heroRef.current) {
-            observer.observe(heroRef.current);
-        }
-
-        return () => {
-            if (heroRef.current) {
-                observer.unobserve(heroRef.current);
-            }
-        };
+        // Trigger animations after component mounts
+        setIsLoaded(true);
     }, []);
 
     const openModal = () => {
@@ -44,17 +26,17 @@ const HeroSection = () => {
     return (
         <section className="hero-section" ref={heroRef}>
             <div className="hero-content">
-                <h1 className="hero-title">
+                <h1 className={`hero-title ${isLoaded ? 'animated' : ''}`}>
                     NaviTek Software
                     <br />
                     Development Services
                 </h1>
-                <p className="hero-description">
+                <p className={`hero-description ${isLoaded ? 'animated' : ''}`}>
                     Are you looking for a reliable team of software development
                     professionals? In case you do, we're ready to share our
                     expertise and help you meet your business objectives.
                 </p>
-                <button className="cta-button" onClick={openModal}>
+                <button className={`cta-button ${isLoaded ? 'animated' : ''}`} onClick={openModal}>
                     Let's start <FaArrowRight className="arrow-icon" />
                 </button>
             </div>
