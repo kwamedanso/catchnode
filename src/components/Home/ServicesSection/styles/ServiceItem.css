@@ -1,0 +1,93 @@
+.service-item {
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr auto;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .service-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .service-features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .feature-item {
+    display: inline-block;
+    margin: 4px 0;
+  }
+  
+  .feature-separator {
+    margin: 0 10px;
+    color: #999;
+  }
+  
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
+    /* visibility: hidden;
+    opacity: 0; */
+    transform: rotate(0deg);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    color: #000;
+}
+
+/* Hover effects */
+.service-item:hover .service-title {
+    color: #0052FF;
+    transform: translateX(10px);
+}
+
+.service-item:hover .arrow-icon {
+    color: #0052FF;
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 992px) {
+    .service-item {
+      grid-template-columns: 1fr 1.5fr auto;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .service-item {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "title arrow"
+        "features features";
+      gap: 15px;
+      padding: 20px 0;
+    }
+    
+    .service-title {
+      font-size: 1.75rem;
+      grid-area: title;
+    }
+    
+    .service-features {
+      font-size: 14px;
+      grid-area: features;
+    }
+    
+    .arrow-icon {
+      grid-area: arrow;
+      width: 20px;
+      height: 20px;
+    }
+  }

@@ -1,0 +1,96 @@
+/* TemplateCard.css */
+.template-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+  }
+  
+  .template-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .template-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .template-preview {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+  }
+  
+  .template-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .template-info {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .template-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: #f9fafb;
+    margin-right: 12px;
+    color: #6b7280;
+  }
+
+  
+  .template-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+  }
+  
+  /* Custom colors for icons based on template type */
+  .template-card:nth-child(1) .template-icon svg{
+    color: #10b981; /* Green for Business */
+  }
+  
+  .template-card:nth-child(2) .template-icon svg{
+    color: #ef4444; /* Red for Meeting */
+  }
+  
+  .template-card:nth-child(3) .template-icon svg{
+    color: #8b5cf6; /* Purple for Employee */
+  }
+  
+  .template-card:nth-child(4) .template-icon svg{
+    color: #f59e0b; /* Yellow for Feedback */
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 640px) {
+    .template-preview {
+      min-height: 120px;
+    }
+    
+    .template-info {
+      padding: 10px 14px;
+    }
+    
+    .template-title {
+      font-size: 13px;
+    }
+  }

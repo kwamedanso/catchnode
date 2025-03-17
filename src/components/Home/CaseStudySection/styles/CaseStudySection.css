@@ -1,0 +1,11 @@
+.case-study-section{
+    background-color: white;
+    padding: 5rem 5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .case-study-section{
+        padding: 3rem 1rem;
+    }
+}
