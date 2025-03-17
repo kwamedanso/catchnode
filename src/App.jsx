@@ -1,31 +1,24 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Header from './components/Header/Header';
-import HeroSection from './components/HeroSection/HeroSection';
-import ServicesSection from './components/ServicesSection/ServicesSection';
-import Testimonials from './components/Testimonials/Testimonials';
-import ImageCarousel from './components/ImageCarousel/ImageCarousel';
-import CallToAction from './components/CallToAction/CallToAction'
 import Footer from './components/Footer/Footer';
-import FaqSection from './components/FaqSection/FaqSection';
-import OurWorksSection from './components/OurWorksSection/OurWorksSection';
-import Templates from './components/Templates/Templates';
-import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
+const Home = lazy(() => import("../src/pages/Home"))
+const Services = lazy(() => import("../src/pages/Services"))
+
+
 
 function App() {
   return (
     <div className="app">
-      <Header />
-      <HeroSection />
-      <ServicesSection />
-      <OurWorksSection />
-      <Templates />
-      <WhyChooseUs />
-      <Testimonials />
-      <ImageCarousel />
-      <FaqSection />
-      <CallToAction />
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/services' element={<Services />} />
+        </Routes>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
