@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavData } from './NavData';
-import NavItem from '../NavItem/NavItem';
+import NavItem from './NavItem/NavItem';
 import Logo from '../Logo/Logo';
-import MobileMenu from '../MobileMenu/MobileMenu';
+import MobileMenu from './MobileMenu/MobileMenu';
 import './styles/Header.css';
 
 const Header = () => {
