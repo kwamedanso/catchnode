@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import ContactModal from './ContactModal';
+import ContactModal from '../ContactModal/ContactModal';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -45,7 +45,7 @@ const HeroSection = () => {
         <section className="hero-section" ref={heroRef}>
             <div className="hero-content">
                 <h1 className="hero-title">
-                    Akveo Software
+                    NaviTek Software
                     <br />
                     Development Services
                 </h1>
