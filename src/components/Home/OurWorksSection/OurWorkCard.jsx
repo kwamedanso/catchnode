@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './styles/OurWorkCard.css';
+import styles from './styles/OurWorkCard.module.css';
 
 const OurWorkCard = ({ title, description, tags, images, portfolioLink }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,7 +19,7 @@ const OurWorkCard = ({ title, description, tags, images, portfolioLink }) => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add(styles.visible);
                     observer.unobserve(entry.target);
                 }
             });
@@ -37,41 +37,41 @@ const OurWorkCard = ({ title, description, tags, images, portfolioLink }) => {
     }, []);
 
     return (
-        <div ref={cardRef} className="our-work-card">
-            <div className="card-content">
-                <div className="card-text">
+        <div ref={cardRef} className={styles.our_work_card}>
+            <div className={styles.card_content}>
+                <div className={styles.card_text}>
                     <h3>{title}</h3>
                     <p>{description}</p>
-                    <div className="tags">
+                    <div className={styles.tags}>
                         {tags.map((tag, index) => (
-                            <span key={index} className="tag">{tag}</span>
+                            <span key={index} className={styles.tag}>{tag}</span>
                         ))}
                     </div>
-                    <a href={portfolioLink} className="view-portfolio-link">
-                        View Portfolio <span className="arrow">→</span>
+                    <a href={portfolioLink} className={styles.view_portfolio_link}>
+                        View Portfolio <span className={styles.arrow}>→</span>
                     </a>
                 </div>
 
-                <div className="card-image-container">
+                <div className={styles.card_image_container}>
                     <div
-                        className="card-image-wrapper"
+                        className={styles.card_image_wrapper}
                         style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                     >
                         {images.map((image, index) => (
-                            <div key={index} className="card-image">
+                            <div key={index} className={styles.card_image}>
                                 <img src={image} alt={`${title} screenshot ${index + 1}`} />
                             </div>
                         ))}
                     </div>
 
                     {hasMultipleImages && (
-                        <div className="image-controls">
-                            <button className="control-button prev" onClick={prevImage} aria-label="Previous image">
+                        <div className={styles.image_controls}>
+                            <button className={`${styles.control_button} ${styles.prev}`} onClick={prevImage} aria-label="Previous image">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </button>
-                            <button className="control-button next" onClick={nextImage} aria-label="Next image">
+                            <button className={`${styles.control_button} ${styles.next}`} onClick={nextImage} aria-label="Next image">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>

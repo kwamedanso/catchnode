@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './styles/HeroSection.css'
-import dashboardImage from '../../../assets/hero-image.jpg'; // Add your dashboard image
+import styles from './styles/HeroSection.module.css';
+import dashboardImage from '../../../assets/hero-image.jpg';
 
 export default function HeroSection() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -11,28 +11,28 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="freelance-hero">
-            <div className="hero-container">
-                <div className="hero-content">
-                    <h1 className={`hero-title ${isLoaded ? 'animated' : ''}`}>
+        <section className={styles.freelance_hero}>
+            <div className={styles.hero_container}>
+                <div className={styles.hero_content}>
+                    <h1 className={`${styles.hero_title} ${isLoaded ? styles.animated : ''}`}>
                         Here to build
                     </h1>
 
-                    <p className={`hero-description ${isLoaded ? 'animated' : ''}`}>
+                    <p className={`${styles.hero_description} ${isLoaded ? styles.animated : ''}`}>
                         Whether you are an agency, freelancer, or client, free up ~6 hours per week
                         to manage the hourly and fixed-term payments on your projects.
                     </p>
 
-                    <div className={`hero-button-container ${isLoaded ? 'animated' : ''}`}>
-                        <button className="hero-button">Get Started – it's free</button>
+                    <div className={`${styles.hero_button_container} ${isLoaded ? styles.animated : ''}`}>
+                        <button className={styles.hero_button}>Get Started – it's free</button>
                     </div>
                 </div>
 
-                <div className={`hero-image-container ${isLoaded ? 'animated' : ''}`}>
+                <div className={`${styles.hero_image_container} ${isLoaded ? styles.animated : ''}`}>
                     <img
                         src={dashboardImage}
                         alt="Freelance payments dashboard"
-                        className="dashboard-image"
+                        className={styles.dashboard_image}
                     />
                 </div>
             </div>

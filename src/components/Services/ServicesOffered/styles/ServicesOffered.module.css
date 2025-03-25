@@ -1,13 +1,13 @@
-/* ServicesOffered.css */
+/* ServicesOffered.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-.services-section {
+.section {
   padding: 80px 0;
   font-family: 'Inter', sans-serif;
   background-color: #fafafa;
 }
 
-.services-container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -17,18 +17,18 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.services-section.visible .services-container {
+.visible .container {
   opacity: 1;
   transform: translateY(0);
 }
 
-.services-title-container {
+.titleContainer {
   width: 25%;
   padding-right: 30px;
   position: relative;
 }
 
-.services-title {
+.title {
   font-size: 36px;
   font-weight: 800;
   color: #000;
@@ -38,21 +38,21 @@
   top: 100px;
 }
 
-.services-grid {
+.grid {
   width: 75%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-.service-card-wrapper {
+.cardWrapper {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease forwards;
   animation-play-state: paused;
 }
 
-.services-section.visible .service-card-wrapper {
+.visible .cardWrapper {
   animation-play-state: running;
 }
 
@@ -65,33 +65,33 @@
 
 /* Responsive styles */
 @media (max-width: 992px) {
-  .services-title {
+  .title {
     font-size: 30px;
   }
   
-  .services-grid {
+  .grid {
     gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .services-container {
+  .container {
     flex-direction: column;
   }
   
-  .services-title-container {
+  .titleContainer {
     width: 100%;
     margin-bottom: 40px;
     padding-right: 0;
   }
   
-  .services-title {
+  .title {
     position: sticky;
     top: 70px;
     font-size: 28px;
   }
   
-  .services-grid {
+  .grid {
     width: 100%;
     grid-template-columns: 1fr;
     gap: 25px;
@@ -99,15 +99,15 @@
 }
 
 @media (max-width: 480px) {
-  .services-section {
+  .section {
     padding: 60px 0;
   }
   
-  .services-title {
+  .title {
     font-size: 24px;
   }
   
-  .services-title-container {
+  .titleContainer {
     margin-bottom: 30px;
   }
 }

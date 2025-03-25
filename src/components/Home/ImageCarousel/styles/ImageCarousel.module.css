@@ -1,4 +1,4 @@
-.image-carousel {
+.image_carousel {
   width: 100%;
   padding: 40px 0;
   background-color: #fff;
@@ -6,19 +6,19 @@
   position: relative;
 }
 
-.image-carousel-title{
+.image_carousel_title{
   margin: 1rem .4rem 2.5rem .4rem;
   text-align: center;
   color: rgb(39, 38, 38);
 }
 
-.carousel-track-container {
+.carousel_track_container {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.carousel-track {
+.carousel_track {
   display: flex;
   align-items: center;
   animation: scroll-left 30s linear infinite;
@@ -34,7 +34,7 @@
   }
 }
 
-.logo-item {
+.logo_item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@
   flex-shrink: 0;
 }
 
-.client-logo {
+.client_logo {
   max-width: 120px;
   max-height: 60px;
   filter: grayscale(100%);
@@ -50,14 +50,14 @@
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-.logo-item:hover .client-logo {
+.logo_item:hover .client_logo {
   filter: grayscale(0);
   opacity: 1;
 }
 
 /* Add pseudo-element for gradient fade effect on the sides */
-.carousel-track-container::before,
-.carousel-track-container::after {
+.carousel_track_container::before,
+.carousel_track_container::after {
   content: "";
   position: absolute;
   top: 0;
@@ -67,37 +67,37 @@
   pointer-events: none;
 }
 
-.carousel-track-container::before {
+.carousel_track_container::before {
   left: 0;
   background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 
-.carousel-track-container::after {
+.carousel_track_container::after {
   right: 0;
   background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 
 /* Pause animation on hover */
-.carousel-track:hover {
+.carousel_track:hover {
   animation-play-state: paused;
 }
 
 @media screen and (max-width: 768px) {
-  .image-carousel {
+  .image_carousel {
     padding: 30px 0;
   }
   
-  .logo-item {
+  .logo_item {
     padding: 0 20px;
   }
   
-  .client-logo {
+  .client_logo {
     max-width: 100px;
     max-height: 50px;
   }
   
-  .carousel-track-container::before,
-  .carousel-track-container::after {
+  .carousel_track_container::before,
+  .carousel_track_container::after {
     width: 60px;
   }
   
@@ -112,21 +112,21 @@
 }
 
 @media screen and (max-width: 576px) {
-  .image-carousel {
+  .image_carousel {
     padding: 20px 0;
   }
   
-  .logo-item {
+  .logo_item {
     padding: 0 15px;
   }
   
-  .client-logo {
+  .client_logo {
     max-width: 80px;
     max-height: 40px;
   }
   
-  .carousel-track-container::before,
-  .carousel-track-container::after {
+  .carousel_track_container::before,
+  .carousel_track_container::after {
     width: 40px;
   }
   

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import OurWorkCard from './OurWorkCard';
-import './styles/OurWorksSection.css';
+import styles from './styles/OurWorksSection.module.css';
 import heroImage from "../../../assets/hero-image.jpg"
 import dashboardImage from "../../../assets/dashboard4.webp"
 
@@ -11,7 +11,7 @@ const OurWorksSection = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add(styles.visible);
                     observer.unobserve(entry.target);
                 }
             });
@@ -53,14 +53,14 @@ const OurWorksSection = () => {
     ];
 
     return (
-        <section ref={sectionRef} className="our-works-section">
-            <div className="projects-header">
-                <span className="projects-label">Projects</span>
+        <section ref={sectionRef} className={styles.our_works_section}>
+            <div className={styles.projects_header}>
+                <span className={styles.projects_label}>Projects</span>
                 <h2>Discover Our Work</h2>
                 <p>Clients trust us to craft impactful design solutions that drive growth and deliver lasting results.</p>
             </div>
 
-            <div className="projects-container">
+            <div className={styles.projects_container}>
                 {projects.map(project => (
                     <OurWorkCard
                         key={project.id}
@@ -73,9 +73,9 @@ const OurWorksSection = () => {
                 ))}
             </div>
 
-            <div className="view-more-container">
-                <a href="/works" className="view-more-link">
-                    View More Works <span className="arrow">→</span>
+            <div className={styles.view_more_container}>
+                <a href="/works" className={styles.view_more_link}>
+                    View More Works <span className={styles.arrow}>→</span>
                 </a>
             </div>
         </section>

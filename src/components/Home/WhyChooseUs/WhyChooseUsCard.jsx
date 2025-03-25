@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './styles/WhyChooseUsCard.css';
+import styles from './styles/WhyChooseUsCard.module.css';
 
 const WhyChooseUsCard = ({ card }) => {
     const cardRef = useRef(null);
@@ -9,7 +9,7 @@ const WhyChooseUsCard = ({ card }) => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        entry.target.classList.add(styles.visible);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -29,12 +29,12 @@ const WhyChooseUsCard = ({ card }) => {
     }, []);
 
     return (
-        <div className="why-choose-us-card" ref={cardRef}>
-            <div className="card-icon" style={{ backgroundColor: card.bgColor }}>
+        <div className={styles.why_choose_us_card} ref={cardRef}>
+            <div className={styles.card_icon} style={{ backgroundColor: card.bgColor }}>
                 <card.icon style={{ color: card.iconColor }} />
             </div>
-            <h3 className="card-title">{card.title}</h3>
-            <p className="card-description">{card.description}</p>
+            <h3 className={styles.card_title}>{card.title}</h3>
+            <p className={styles.card_description}>{card.description}</p>
         </div>
     );
 };

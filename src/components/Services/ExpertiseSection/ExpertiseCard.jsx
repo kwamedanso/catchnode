@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './styles/ExpertiseCard.css';
+import styles from './styles/ExpertiseCard.module.css';
 
 const ExpertiseCard = ({ card }) => {
     const cardRef = useRef(null);
@@ -9,7 +9,7 @@ const ExpertiseCard = ({ card }) => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        entry.target.classList.add(styles.visible);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -29,12 +29,12 @@ const ExpertiseCard = ({ card }) => {
     }, []);
 
     return (
-        <div className="expertise-card" ref={cardRef}>
-            <div className="card-icon">
+        <div className={styles.card} ref={cardRef}>
+            <div className={styles.icon}>
                 {card.icon}
             </div>
-            <h3 className="card-title">{card.title}</h3>
-            <p className="card-description">{card.description}</p>
+            <h3 className={styles.title}>{card.title}</h3>
+            <p className={styles.description}>{card.description}</p>
         </div>
     );
 };

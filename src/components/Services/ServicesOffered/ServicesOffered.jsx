@@ -1,17 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ServiceCard from './ServiceCard';
 import servicesData from './servicesData';
-import './styles/ServicesOffered.css';
+import styles from './styles/ServicesOffered.module.css';
 
 const ServicesOffered = () => {
     const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        setIsVisible(true);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -30,19 +31,17 @@ const ServicesOffered = () => {
         };
     }, []);
 
-
-
     return (
-        <section className="services-section" ref={sectionRef}>
-            <div className="services-container">
-                <div className="services-title-container">
-                    <h2 className="services-title">Services we offer</h2>
+        <section className={`${styles.section} ${isVisible ? styles.visible : ''}`} ref={sectionRef}>
+            <div className={styles.container}>
+                <div className={styles.titleContainer}>
+                    <h2 className={styles.title}>Services we offer</h2>
                 </div>
 
-                <div className="services-grid">
+                <div className={styles.grid}>
                     {servicesData.map((service, index) => (
                         <div
-                            className="service-card-wrapper"
+                            className={styles.cardWrapper}
                             key={service.id}
                             style={{ animationDelay: `${index * 100}ms` }}
                         >

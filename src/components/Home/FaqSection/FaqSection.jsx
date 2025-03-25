@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import FaqItem from './FaqItem';
-import './styles/FaqSection.css';
+import styles from './styles/FaqSection.module.css';
 
 const FaqSection = () => {
     const [openFaqIndex, setOpenFaqIndex] = useState(0); // First FAQ open by default
@@ -76,25 +76,25 @@ const FaqSection = () => {
     ];
 
     return (
-        <section className="faq-section" ref={sectionRef}>
-            <div className="faq-container">
+        <section className={styles.section} ref={sectionRef}>
+            <div className={styles.container}>
                 <h1
-                    className={`faq-header ${headerVisible ? 'visible' : ''}`}
+                    className={`${styles.header} ${headerVisible ? styles.headerVisible : ''}`}
                     ref={headerRef}
                 >
                     Frequently Asked Questions
                 </h1>
 
-                <p className={`faq-description ${descriptionVisible ? 'visible' : ''}`}>
+                <p className={`${styles.description} ${descriptionVisible ? styles.descriptionVisible : ''}`}>
                     Quick answers to questions you may have about Untitled UI and billing. Can't find
                     what you're looking for? Check out our <a href="#documentation">full documentation</a>.
                 </p>
 
-                <div className={`faq-buttons ${buttonsVisible ? 'visible' : ''}`}>
-                    <a href="#documentation" className="faq-button documentation">
+                <div className={`${styles.buttons} ${buttonsVisible ? styles.buttonsVisible : ''}`}>
+                    <a href="#documentation" className={`${styles.button} ${styles.documentation}`}>
                         Documentation
                     </a>
-                    <a href="#contact" className="faq-button contact">
+                    <a href="#contact" className={`${styles.button} ${styles.contact}`}>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 9C18 13.4183 14.4183 17 10 17C8.46073 17 7.01172 16.5207 5.79857 15.693L2 16.5L2.90716 12.9196C2.33165 11.9157 2 10.7781 2 9C2 4.58172 5.58172 1 10 1C14.4183 1 18 4.58172 18 9Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
@@ -102,7 +102,7 @@ const FaqSection = () => {
                     </a>
                 </div>
 
-                <div className="faq-list">
+                <div className={styles.list}>
                     {faqs.map((faq, index) => (
                         <FaqItem
                             key={index}

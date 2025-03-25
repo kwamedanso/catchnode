@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './styles/FaqItem.css';
+import styles from './styles/FaqItem.module.css';
 
 const FaqItem = ({ question, answer, isOpen, toggleFaq, index }) => {
     const [height, setHeight] = useState(0);
@@ -42,17 +42,17 @@ const FaqItem = ({ question, answer, isOpen, toggleFaq, index }) => {
 
     return (
         <div
-            className={`faq-item ${isVisible ? 'visible' : ''}`}
+            className={`${styles.item} ${isVisible ? styles.visible : ''}`}
             ref={itemRef}
         >
             <button
-                className={`faq-question ${isOpen ? 'open' : ''}`}
+                className={`${styles.question} ${isOpen ? styles.open : ''}`}
                 onClick={() => toggleFaq(index)}
                 aria-expanded={isOpen}
             >
                 <span>{question}</span>
                 <svg
-                    className="chevron-icon"
+                    className={styles.chevronIcon}
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -69,11 +69,11 @@ const FaqItem = ({ question, answer, isOpen, toggleFaq, index }) => {
                 </svg>
             </button>
             <div
-                className="faq-answer-container"
+                className={styles.answerContainer}
                 style={{ height: `${height}px` }}
             >
                 <div
-                    className="faq-answer"
+                    className={styles.answer}
                     ref={contentRef}
                 >
                     {answer}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './styles/TemplateCard.css';
+import styles from './styles/TemplateCard.module.css';
 
 const TemplateCard = ({ template }) => {
     const cardRef = useRef(null);
@@ -9,7 +9,7 @@ const TemplateCard = ({ template }) => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        entry.target.classList.add(styles.visible);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -29,13 +29,13 @@ const TemplateCard = ({ template }) => {
     }, []);
 
     return (
-        <div className="template-card" ref={cardRef} style={{ backgroundColor: template.bgColor }}>
-            <div className="template-preview">
+        <div className={styles.template_card} ref={cardRef} style={{ backgroundColor: template.bgColor }}>
+            <div className={styles.template_preview}>
                 <img src={template.imageSrc} alt={template.title} />
             </div>
-            <div className="template-info">
-                <div className="template-icon"><template.icon style={{ color: template.iconColor }} /></div>
-                <div className="template-title">{template.title}</div>
+            <div className={styles.template_info}>
+                <div className={styles.template_icon}><template.icon style={{ color: template.iconColor }} /></div>
+                <div className={styles.template_title}>{template.title}</div>
             </div>
         </div>
     );

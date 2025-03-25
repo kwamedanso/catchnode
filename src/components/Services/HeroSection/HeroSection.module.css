@@ -1,7 +1,7 @@
-/* HeroSection.css */
+/* HeroSection.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-.hero-section {
+.section {
   background-color: #000;
   color: #fff;
   min-height: 80vh;
@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.hero-content {
+.content {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -20,12 +20,12 @@
   transition: opacity 1s ease, transform 1s ease;
 }
 
-.hero-section.visible .hero-content {
+.visible .content {
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero-title {
+.title {
   font-family: 'Inter', sans-serif;
   font-size: 3.5rem;
   font-weight: 800;
@@ -38,12 +38,13 @@
   transition-delay: 0.2s;
   color: #fff;
 }
-.hero-title.animated {
+
+.title.animated {
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero-description {
+.description {
   font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 40px;
@@ -54,12 +55,13 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
   transition-delay: 0.4s;
 }
-.hero-description.animated {
+
+.description.animated{
   opacity: 1;
   transform: translateY(0);
 }
 
-.cta-button {
+.ctaButton {
   background-color: #1a56db;
   color: white;
   border: none;
@@ -75,64 +77,63 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
   transition-delay: 0.6s;
 }
-
-.cta-button.animated {
+.ctaButton.animated{
   opacity: 1;
   transform: translateY(0);
 }
 
-.cta-button svg{
+.ctaButton svg {
   color: #fff;
 }
 
-.cta-button:hover {
+.ctaButton:hover {
   background-color: #1e429f;
   transform: translateY(-2px);
 }
 
-.cta-button:active {
+.ctaButton:active {
   transform: translateY(0);
 }
 
-.arrow-icon {
+.arrowIcon {
   margin-left: 8px;
   transition: transform 0.3s;
 }
 
-.cta-button:hover .arrow-icon {
+.ctaButton:hover .arrowIcon {
   transform: translateX(4px);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .hero-section {
+  .section {
     padding: 60px 20px;
   }
   
-  .hero-title {
+  .title {
     font-size: 2.5rem;
   }
   
-  .hero-description {
+  .description {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-section {
+  .section {
     padding: 40px 20px;
   }
   
-  .hero-title {
+  .title {
     font-size: 2rem;
   }
   
-  .hero-description {
+  .description {
     font-size: 0.9rem;
     margin-bottom: 30px;
   }
   
-  .cta-button {
+  .ctaButton {
     width: 100%;
     justify-content: center;
     padding: 14px 20px;

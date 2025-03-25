@@ -1,6 +1,6 @@
-/* OurWorkCard.css */
+/* OurWorkCard.module.css */
 
-.our-work-card {
+.our_work_card {
   background-color: #fff;
   border-radius: 16px;
   overflow: hidden;
@@ -10,35 +10,35 @@
   transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
 }
 
-.our-work-card.visible {
+.our_work_card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.our-work-card:hover {
+.our_work_card:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-.card-content {
+.card_content {
   display: flex;
   flex-direction: row;
 }
 
-.card-text {
+.card_text {
   flex: 1;
   padding: 40px;
   display: flex;
   flex-direction: column;
 }
 
-.card-text h3 {
+.card_text h3 {
   font-size: 24px;
   font-weight: 600;
   color: #111;
   margin-bottom: 16px;
 }
 
-.card-text p {
+.card_text p {
   color: #666;
   margin-bottom: 24px;
   flex-grow: 1;
@@ -59,7 +59,7 @@
   font-size: 14px;
 }
 
-.view-portfolio-link {
+.view_portfolio_link {
   color: #5850ec;
   text-decoration: none;
   font-weight: 500;
@@ -69,20 +69,20 @@
   transition: color 0.3s ease;
 }
 
-.view-portfolio-link:hover {
+.view_portfolio_link:hover {
   color: #4338ca;
 }
 
-.view-portfolio-link .arrow {
+.view_portfolio_link .arrow {
   margin-left: 8px;
   transition: transform 0.3s ease;
 }
 
-.view-portfolio-link:hover .arrow {
+.view_portfolio_link:hover .arrow {
   transform: translateX(4px);
 }
 
-.card-image-container {
+.card_image_container {
   flex: 1.2;
   position: relative;
   overflow: hidden;
@@ -91,26 +91,26 @@
   padding: 20px 0;
 }
 
-.card-image-wrapper {
+.card_image_wrapper {
   display: flex;
   transition: transform 0.5s ease;
   height: 100%;
 }
 
-.card-image {
+.card_image {
   min-width: 100%;
   flex: 1 0 100%;
   height: 100%;
 }
 
-.card-image img {
+.card_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.image-controls {
+.image_controls {
   position: absolute;
   top: 0;
   left: 0;
@@ -125,11 +125,11 @@
   pointer-events: none; /* This ensures clicks pass through to the image when not on buttons */
 }
 
-.card-image-container:hover .image-controls {
+.card_image_container:hover .image_controls {
   opacity: 1;
 }
 
-.control-button {
+.control_button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -146,44 +146,44 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.control-button:hover {
+.control_button:hover {
   background-color: white;
   transform: scale(1.05);
 }
 
-.control-button:active {
+.control_button:active {
   transform: scale(0.95);
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-  .card-content {
+  .card_content {
     flex-direction: column;
   }
   
-  .card-image-container {
+  .card_image_container {
     min-height: 300px;
     order: 2;
   }
   
-  .card-text {
+  .card_text {
     order: 1;
     padding: 30px;
   }
   
-  .card-text h3 {
+  .card_text h3 {
     font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .card-text {
+  .card_text {
     padding: 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .card-image-container {
+  .card_image_container {
     min-height: 250px;
   }
   
@@ -192,7 +192,7 @@
     padding: 4px 8px;
   }
   
-  .view-portfolio-link {
+  .view_portfolio_link {
     font-size: 14px;
   }
 }

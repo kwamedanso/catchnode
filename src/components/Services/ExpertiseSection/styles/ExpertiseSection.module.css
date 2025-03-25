@@ -1,14 +1,14 @@
-/* ExpertiseSection.css */
+/* ExpertiseSection.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-.expertise-section {
-    margin: 0 5rem;
+.section {
+  margin: 0 5rem;
   padding: 80px 0;
   font-family: 'Inter', sans-serif;
   background-color: #fff;
 }
 
-.expertise-container {
+.container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1200px;
@@ -19,16 +19,16 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.expertise-section.visible .expertise-container {
+.visible .container {
   opacity: 1;
   transform: translateY(0);
 }
 
-.expertise-header {
+.header {
   margin-bottom: 60px;
 }
 
-.expertise-label {
+.label {
   font-size: 14px;
   font-weight: 600;
   color: #6b7280;
@@ -37,7 +37,7 @@
   margin-bottom: 10px;
 }
 
-.expertise-title {
+.title {
   font-size: 36px;
   font-weight: 800;
   color: #111827;
@@ -45,20 +45,20 @@
   line-height: 1.2;
 }
 
-.expertise-cards {
+.cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-.expertise-card-wrapper {
+.cardWrapper {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease forwards;
   animation-play-state: paused;
 }
 
-.expertise-section.visible .expertise-card-wrapper {
+.visible .cardWrapper {
   animation-play-state: running;
 }
 
@@ -71,44 +71,45 @@
 
 /* Responsive styles */
 @media (max-width: 992px) {
-  .expertise-cards {
+  .cards {
     gap: 20px;
   }
   
-  .expertise-header {
+  .header {
     margin-bottom: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .expertise-section {
+  .section {
     margin: 0 .5rem;
     padding: 60px 0;
-}
+  }
 
-.expertise-container{
+  .container {
     grid-template-columns: 1fr; 
-}
-  .expertise-title {
+  }
+  
+  .title {
     font-size: 30px;
   }
   
-  .expertise-cards {
+  .cards {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 }
 
 @media (max-width: 480px) {
-  .expertise-section {
+  .section {
     padding: 40px 0;
   }
   
-  .expertise-title {
+  .title {
     font-size: 26px;
   }
   
-  .expertise-header {
+  .header {
     margin-bottom: 30px;
   }
 }

@@ -1,0 +1,125 @@
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .option-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .option-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .option-section p {
+    font-size: 0.9375rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+  }
+  
+  .option-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .option-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #111827;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .option-button:hover {
+    color: #4f46e5;
+  }
+  
+  .option-button svg {
+    flex-shrink: 0;
+  }
+  
+  .phone-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .phone-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #111827;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .phone-link:hover {
+    color: #4f46e5;
+  }
+  
+  .company-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .logo {
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  
+  .logo:hover {
+    opacity: 1;
+  }
+  
+  @media (max-width: 900px) {
+    .contact-options {
+      gap: 2rem;
+    }
+    
+    .company-logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .logo-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .option-section h3 {
+      font-size: 1.125rem;
+    }
+    
+    .option-section p {
+      font-size: 0.875rem;
+    }
+    
+    .option-button, 
+    .phone-link {
+      font-size: 0.875rem;
+    }
+  }

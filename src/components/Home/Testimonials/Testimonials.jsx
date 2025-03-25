@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './styles/Testimonials.css';
+import styles from './styles/Testimonials.module.css';
 import testimonies from './testimonies'
 
 
@@ -48,7 +48,7 @@ const Testimonials = () => {
     }, []);
 
     const handlePrev = () => {
-        setSlideDirection('slide-right');
+        setSlideDirection(styles.slide_right);
         setTimeout(() => {
             setActiveIndex((prevIndex) => (prevIndex === 0 ? testimonies.length - 1 : prevIndex - 1));
             setSlideDirection('');
@@ -56,7 +56,7 @@ const Testimonials = () => {
     };
 
     const handleNext = () => {
-        setSlideDirection('slide-left');
+        setSlideDirection(styles.slide_left);
         setTimeout(() => {
             setActiveIndex((prevIndex) => (prevIndex === testimonies.length - 1 ? 0 : prevIndex + 1));
             setSlideDirection('');
@@ -66,21 +66,21 @@ const Testimonials = () => {
     const activeTestimonial = testimonies[activeIndex];
 
     return (
-        <section className="testimonials-section" ref={sectionRef}>
-            <div className="testimonials-container">
+        <section className={styles.testimonials_section} ref={sectionRef}>
+            <div className={styles.testimonials_container}>
                 <div
-                    className={`testimonials-header ${isVisible.header ? 'animate-in' : ''}`}
+                    className={`${styles.testimonials_header} ${isVisible.header ? styles.animate_in : ''}`}
                     ref={headerRef}
                 >
-                    <span className="section-label">TESTIMONIALS</span>
-                    <h2 className="testimonials-title">Hear from<br />our clients</h2>
-                    <div className="testimonials-nav">
-                        <button className="nav-button" onClick={handlePrev} aria-label="Previous testimonial">
+                    <span className={styles.section_label}>TESTIMONIALS</span>
+                    <h2 className={styles.testimonials_title}>Hear from<br />our clients</h2>
+                    <div className={styles.testimonials_nav}>
+                        <button className={styles.nav_button} onClick={handlePrev} aria-label="Previous testimonial">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
-                        <button className="nav-button" onClick={handleNext} aria-label="Next testimonial">
+                        <button className={styles.nav_button} onClick={handleNext} aria-label="Next testimonial">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
@@ -88,26 +88,26 @@ const Testimonials = () => {
                     </div>
                 </div>
                 <div
-                    className={`testimonial-card-container ${isVisible.card ? 'animate-in' : ''}`}
+                    className={`${styles.testimonial_card_container} ${isVisible.card ? styles.animate_in : ''}`}
                     ref={cardRef}
                 >
-                    <div className={`testimonial-card ${slideDirection}`}>
-                        <div className="testimonial-quote">
-                            <svg className="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="#0052FF">
+                    <div className={`${styles.testimonial_card} ${slideDirection}`}>
+                        <div className={styles.testimonial_quote}>
+                            <svg className={styles.quote_icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="#0052FF">
                                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                             </svg>
-                            <h3 className="testimonial-heading">{activeTestimonial.quote}</h3>
+                            <h3 className={styles.testimonial_heading}>{activeTestimonial.quote}</h3>
                         </div>
-                        <p className="testimonial-text">{activeTestimonial.text}</p>
-                        <div className="testimonial-author">
+                        <p className={styles.testimonial_text}>{activeTestimonial.text}</p>
+                        <div className={styles.testimonial_author}>
                             <img
                                 src={activeTestimonial.avatar}
                                 alt={activeTestimonial.author}
-                                className="author-image"
+                                className={styles.author_image}
                             />
-                            <div className="author-info">
-                                <h4 className="author-name">{activeTestimonial.author}</h4>
-                                <p className="author-position">{activeTestimonial.position}</p>
+                            <div className={styles.author_info}>
+                                <h4 className={styles.author_name}>{activeTestimonial.author}</h4>
+                                <p className={styles.author_position}>{activeTestimonial.position}</p>
                             </div>
                         </div>
                     </div>

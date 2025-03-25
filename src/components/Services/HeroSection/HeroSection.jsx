@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import ContactModal from '../ContactModal/ContactModal';
-import './HeroSection.css';
+import styles from './HeroSection.module.css';
 
 const HeroSection = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -24,20 +24,20 @@ const HeroSection = () => {
     };
 
     return (
-        <section className="hero-section" ref={heroRef}>
-            <div className="hero-content">
-                <h1 className={`hero-title ${isLoaded ? 'animated' : ''}`}>
+        <section className={styles.section} ref={heroRef}>
+            <div className={styles.content}>
+                <h1 className={`${styles.title} ${isLoaded ? styles.animated : ''}`}>
                     NaviTek Software
                     <br />
                     Development Services
                 </h1>
-                <p className={`hero-description ${isLoaded ? 'animated' : ''}`}>
+                <p className={`${styles.description} ${isLoaded ? styles.animated : ''}`}>
                     Are you looking for a reliable team of software development
                     professionals? In case you do, we're ready to share our
                     expertise and help you meet your business objectives.
                 </p>
-                <button className={`cta-button ${isLoaded ? 'animated' : ''}`} onClick={openModal}>
-                    Let's start <FaArrowRight className="arrow-icon" />
+                <button className={`${styles.ctaButton} ${isLoaded ? styles.animated : ''}`} onClick={openModal}>
+                    Let's start <FaArrowRight className={styles.arrowIcon} />
                 </button>
             </div>
 

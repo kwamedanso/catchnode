@@ -1,17 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ExpertiseCard from './ExpertiseCard';
-import './styles/ExpertiseSection.css';
+import styles from './styles/ExpertiseSection.module.css';
 import { IoCodeSlash, IoBusinessOutline } from 'react-icons/io5';
 
 const ExpertiseSection = () => {
     const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        setIsVisible(true);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -46,18 +47,18 @@ const ExpertiseSection = () => {
     ];
 
     return (
-        <section className="expertise-section" ref={sectionRef}>
-            <div className="expertise-container">
-                <div className="expertise-header">
-                    <span className="expertise-label">EXPERTISE</span>
-                    <h2 className="expertise-title">Software for diverse industries</h2>
+        <section className={`${styles.section} ${isVisible ? styles.visible : ''}`} ref={sectionRef}>
+            <div className={styles.container}>
+                <div className={styles.header}>
+                    <span className={styles.label}>EXPERTISE</span>
+                    <h2 className={styles.title}>Software for diverse industries</h2>
                 </div>
 
-                <div className="expertise-cards">
+                <div className={styles.cards}>
                     {expertiseData.map((card, index) => (
                         <div
                             key={card.id}
-                            className="expertise-card-wrapper"
+                            className={styles.cardWrapper}
                             style={{ animationDelay: `${(index + 1) * 150}ms` }}
                         >
                             <ExpertiseCard card={card} />

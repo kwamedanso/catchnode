@@ -1,15 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import TemplateCard from './TemplateCard';
-import './styles/Templates.css';
+import styles from './styles/Templates.module.css';
 import { MdOutlineImagesearchRoller, MdOutlinePlumbing, MdOutlineConstruction, MdOutlineElectricalServices } from "react-icons/md";
 
-import plumber from "../../../assets/painter.webp"
+import plumber from "../../../assets/plumber.webp"
 import electrician from "../../../assets/electrician.webp"
 import constructionWorker from "../../../assets/construction-worker.webp"
 import painter from "../../../assets/painter.webp"
-
-
-
 
 const Templates = () => {
     const sectionRef = useRef(null);
@@ -19,7 +16,7 @@ const Templates = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        entry.target.classList.add(styles.visible);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -53,7 +50,6 @@ const Templates = () => {
             icon: MdOutlineImagesearchRoller,
             bgColor: '#ffefef',
             iconColor: '#ef4444',
-
             imageSrc: painter,
         },
         {
@@ -70,23 +66,21 @@ const Templates = () => {
             icon: MdOutlineElectricalServices,
             bgColor: '#fff8e6',
             iconColor: '#f59e0b',
-
             imageSrc: electrician,
         },
     ];
 
     return (
-        <section className="templates-section" ref={sectionRef}>
-            {/* <div className="templates-indicator"></div> */}
-            <h2 className="templates-title">Templates for all your needs</h2>
-            <p className="templates-description">
+        <section className={styles.templates_section} ref={sectionRef}>
+            <h2 className={styles.templates_title}>Templates for all your needs</h2>
+            <p className={styles.templates_description}>
                 Get started with a template to get up and running instantly.
             </p>
 
-            <div className="templates-grid">
+            <div className={styles.templates_grid}>
                 {templateData.map((template, index) => (
                     <div
-                        className="template-card-container"
+                        className={styles.template_card_container}
                         key={template.id}
                         style={{ animationDelay: `${index * 100}ms` }}
                     >
@@ -95,8 +89,8 @@ const Templates = () => {
                 ))}
             </div>
 
-            <div className="templates-button-container">
-                <button className="browse-button">Browse template library</button>
+            <div className={styles.templates_button_container}>
+                <button className={styles.browse_button}>Browse template library</button>
             </div>
         </section>
     );

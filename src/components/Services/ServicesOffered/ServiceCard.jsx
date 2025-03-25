@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './styles/ServiceCard.css';
+import styles from './styles/ServiceCard.module.css';
 
 const ServiceCard = ({ service }) => {
     const cardRef = useRef(null);
@@ -9,7 +9,7 @@ const ServiceCard = ({ service }) => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        entry.target.classList.add(styles.visible);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -29,12 +29,12 @@ const ServiceCard = ({ service }) => {
     }, []);
 
     return (
-        <div className="service-card" ref={cardRef}>
-            <div className="service-icon">
+        <div className={styles.card} ref={cardRef}>
+            <div className={styles.icon}>
                 <service.icon />
             </div>
-            <h3 className="service-name">{service.title}</h3>
-            <p className="service-description">{service.description}</p>
+            <h3 className={styles.name}>{service.title}</h3>
+            <p className={styles.description}>{service.description}</p>
         </div>
     );
 };

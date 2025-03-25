@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-.freelance-hero {
+.freelance_hero {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   padding: 80px 0;
   background: linear-gradient(to bottom, #ffffff, #f8fafc);
   overflow: hidden;
 }
 
-.hero-container {
+.hero_container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -18,12 +18,12 @@
 }
 
 /* Text content */
-.hero-content {
+.hero_content {
   margin: 50px 0;
   max-width: 700px;
 }
 
-.hero-title {
+.hero_title {
   font-size: 4rem;
   font-weight: 800;
   color: #1a202c;
@@ -34,12 +34,12 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.hero-title.animated {
+.hero_title.animated {
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero-description {
+.hero_description {
   font-size: 18px;
   line-height: 1.6;
   color: #64748b;
@@ -50,24 +50,24 @@
   transition-delay: 0.2s;
 }
 
-.hero-description.animated {
+.hero_description.animated {
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero-button-container {
+.hero_button_container {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
   transition-delay: 0.4s;
 }
 
-.hero-button-container.animated {
+.hero_button_container.animated {
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero-button {
+.hero_button {
   background-color: #1a202c;
   color: white;
   font-weight: 600;
@@ -79,13 +79,13 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.hero-button:hover {
+.hero_button:hover {
   background-color: #2d3748;
   transform: translateY(-2px);
 }
 
 /* Dashboard image */
-.hero-image-container {
+.hero_image_container {
   width: 100%;
   max-width: 800px;
   opacity: 0;
@@ -94,12 +94,12 @@
   transition-delay: 0.6s;
 }
 
-.hero-image-container.animated {
+.hero_image_container.animated {
   opacity: 1;
   transform: translateY(0);
 }
 
-.dashboard-image {
+.dashboard_image {
   width: 100%;
   display: block;
   border-radius: 12px;
@@ -108,33 +108,33 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .freelance-hero {
+  .freelance_hero {
     padding: 60px 0;
   }
   
-  .hero-title {
+  .hero_title {
     font-size: 32px;
   }
   
-  .hero-description {
+  .hero_description {
     font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .freelance-hero {
+  .freelance_hero {
     padding: 40px 0;
   }
   
-  .hero-title {
+  .hero_title {
     font-size: 2.7rem;
   }
   
-  .hero-description {
+  .hero_description {
     font-size: 15px;
   }
   
-  .hero-button {
+  .hero_button {
     padding: 12px 24px;
     font-size: 15px;
   }

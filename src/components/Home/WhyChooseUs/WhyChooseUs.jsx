@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import WhyChooseUsCard from './WhyChooseUsCard';
-import './styles/WhyChooseUs.css';
+import styles from './styles/WhyChooseUs.module.css';
 import {
     FaTools,
     FaChartLine,
@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        entry.target.classList.add(styles.visible);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -89,9 +89,9 @@ const WhyChooseUs = () => {
     ];
 
     return (
-        <section className="why-choose-us-section" ref={sectionRef}>
-            <div className="why-choose-us-container">
-                <div className="why-choose-us-header">
+        <section className={styles.why_choose_us_section} ref={sectionRef}>
+            <div className={styles.why_choose_us_container}>
+                <div className={styles.why_choose_us_header}>
                     <h2>
                         Why Choose Us
                     </h2>
@@ -101,10 +101,10 @@ const WhyChooseUs = () => {
                     </p>
                 </div>
 
-                <div className="why-choose-us-grid">
+                <div className={styles.why_choose_us_grid}>
                     {cardData.map((card, index) => (
                         <div
-                            className="card-wrapper"
+                            className={styles.card_wrapper}
                             key={card.id}
                             style={{ animationDelay: `${index * 100}ms` }}
                         >

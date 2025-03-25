@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './styles/ImageCarousel.css';
-
-
+import styles from './styles/ImageCarousel.module.css';
 
 const ImageCarousel = () => {
     // If you don't have the actual logo images, you can use these placeholders
@@ -22,7 +20,7 @@ const ImageCarousel = () => {
         if (!carousel) return;
 
         // Calculate the width of a single logo item including margins
-        const logoItem = carousel.querySelector('.logo-item');
+        const logoItem = carousel.querySelector(`.${styles.logo_item}`);
         if (!logoItem) return;
 
         const logoWidth = logoItem.offsetWidth;
@@ -53,13 +51,13 @@ const ImageCarousel = () => {
     }, [logos.length]);
 
     return (
-        <div className="image-carousel">
-            <h4 className='image-carousel-title'>We're proud partners with the industry's leading tech companies.</h4>
-            <div className="carousel-track-container">
-                <div className="carousel-track" ref={carouselRef}>
+        <div className={styles.image_carousel}>
+            <h4 className={styles.image_carousel_title}>We're proud partners with the industry's leading tech companies.</h4>
+            <div className={styles.carousel_track_container}>
+                <div className={styles.carousel_track} ref={carouselRef}>
                     {duplicatedLogos.map((logo, index) => (
-                        <div key={`${logo.id}-${index}`} className="logo-item">
-                            <img src={logo.src} alt={logo.alt} className="client-logo" />
+                        <div key={`${logo.id}-${index}`} className={styles.logo_item}>
+                            <img src={logo.src} alt={logo.alt} className={styles.client_logo} />
                         </div>
                     ))}
                 </div>
