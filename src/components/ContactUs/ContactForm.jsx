@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ContactOptions from './ContactOptions';
 import ServiceSelection from './ServiceSelection';
-import './ContactForm.css';
+import './styles/ContactForm.css';
 
 const ContactForm = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',

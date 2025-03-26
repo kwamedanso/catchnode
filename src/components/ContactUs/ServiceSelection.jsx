@@ -1,5 +1,5 @@
 import React from 'react';
-import './ServiceSelection.css';
+import './styles/ServiceSelection.css';
 
 const ServiceSelection = ({ services, handleServiceChange }) => {
     return (
