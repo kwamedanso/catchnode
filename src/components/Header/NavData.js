@@ -225,7 +225,7 @@ export const NavData = [
             // },
             {
                 title: 'Contact',
-                path: '/company/contact',
+                path: '/contact-us',
                 description: 'Reach out to us',
                 icon: TiContacts,
             }
