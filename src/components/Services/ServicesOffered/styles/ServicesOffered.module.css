@@ -86,8 +86,8 @@
   }
   
   .title {
-    position: sticky;
-    top: 70px;
+    /* position: sticky; */
+    /* top: 70px; */
     font-size: 28px;
   }
   

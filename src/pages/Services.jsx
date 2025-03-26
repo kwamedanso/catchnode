@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FaqSection from '../components/Home/FaqSection/FaqSection'
 import WhyChooseUs from '../components/Home/WhyChooseUs/WhyChooseUs'
 import HeroSection from '../components/Services/HeroSection/HeroSection'
@@ -7,6 +7,11 @@ import ServicesOffered from '../components/Services/ServicesOffered/ServicesOffe
 
 
 export default function Services() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div>
             <HeroSection />
@@ -14,6 +19,7 @@ export default function Services() {
             <ServicesOffered />
             <WhyChooseUs />
             <FaqSection />
+            <HeroSection />
         </div>
     )
 }

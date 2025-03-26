@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Header from './components/Header/Header';
@@ -7,10 +7,17 @@ import Loader from './components/Loader/Loader';
 const Home = lazy(() => import("../src/pages/Home"))
 const Services = lazy(() => import("../src/pages/Services"))
 const ContactUs = lazy(() => import("../src/pages/ContactUs"))
+import { fixTouchEvents } from './fixTouchEvents';
 
 
 
 function App() {
+
+  useEffect(() => {
+    fixTouchEvents()
+  }, [])
+
+
   return (
     <div className="app">
       <Suspense fallback={<Loader />}>

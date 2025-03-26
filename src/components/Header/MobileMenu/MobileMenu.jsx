@@ -20,7 +20,7 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="mobile-menu">
+        <div className={`mobile-menu ${isOpen ? "animated" : ""}`}>
             <div className="mobile-menu-content">
                 <ul className="mobile-menu-list">
                     {navItems.map((item, index) => (
