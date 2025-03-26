@@ -19,7 +19,6 @@ export default function Services() {
             <ServicesOffered />
             <WhyChooseUs />
             <FaqSection />
-            <HeroSection />
         </div>
     )
 }
