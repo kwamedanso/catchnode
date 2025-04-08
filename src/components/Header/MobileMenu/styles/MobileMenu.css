@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100vh;
+    height: calc(100dvh - 60px);
     background-color: white;
     z-index: 1999;
     overflow-y: auto;
@@ -188,7 +188,6 @@
     margin-top: auto;
   }
   
-  /* .mobile-contact-btn {
+  .mobile-contact-btn {
     width: 100%;
-    display: none;
-  } */
+  }
