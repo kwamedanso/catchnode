@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavData } from './NavData';
 import NavItem from './NavItem/NavItem';
 import Logo from '../Logo/Logo';
 import MobileMenu from './MobileMenu/MobileMenu';
+import { Link } from 'react-router-dom';
 import './styles/Header.css';
 
 const Header = () => {
@@ -56,7 +57,7 @@ const Header = () => {
                         ))}
                     </ul>
                 </nav>
-                <a href="/contact" className="btn btn-primary contact-us-link">Contact us</a>
+                <Link to={"/contact"} className="btn btn-primary contact-us-link">Contact us</Link>
 
                 <button
                     className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}

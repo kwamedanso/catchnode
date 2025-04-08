@@ -1,0 +1,35 @@
+.label {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+    -webkit-user-select: none; /* Disable text selection */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .label:hover {
+    opacity: 0.8;
+  }
+  
+  .label.selected {
+    opacity: 1;
+    /* font-weight: bold; */
+    background-color: #ffffff; /* Optional: Add a background to the selected item */
+  }
+  
+  .label.unselected {
+    opacity: 0.3;
+  }
+  
+  .input {
+    /* Hide the default radio button */
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }

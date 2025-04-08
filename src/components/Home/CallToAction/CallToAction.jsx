@@ -9,7 +9,7 @@ const CallToAction = () => {
                 <div className={styles.contact}>
                     <span className={styles.label}>CONTACT US</span>
                     <h2 className={styles.title}>Let's talk business!</h2>
-                    <Link to={"/contact-us"} className={styles.button}>
+                    <Link to={"/contact"} className={styles.button}>
                         Let's start
                         <svg className={styles.arrowIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>

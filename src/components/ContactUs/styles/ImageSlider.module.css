@@ -1,0 +1,39 @@
+.sliderContainer {
+  overflow: hidden;
+  width: 100%; /* Adjust as needed */
+}
+
+.sliderWrapper {
+  display: flex;
+  animation: slide 15s linear infinite; /* Adjust duration as needed */
+}
+
+.slide {
+  flex-shrink: 1; /* Prevent images from shrinking */
+  width: auto; /* Adjust based on your image widths */
+  margin-right: 20px; /* Optional spacing between images */
+}
+
+.slide img {
+  display: block;
+  height: 100px; /* Adjust image height as needed */
+  width: auto; /* Maintain aspect ratio */
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%); /* Move all images out of view */
+  }
+}
+
+/* Adjust the animation speed based on the number and width of images */
+/* Example for more images and wider container: */
+/* .sliderWrapper {
+  animation-duration: 30s;
+} */

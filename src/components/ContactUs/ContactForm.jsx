@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ContactOptions from './ContactOptions';
 import ServiceSelection from './ServiceSelection';
-import './styles/ContactForm.css';
+import styles from './styles/ContactForm.module.css'; // Import the CSS Module
+import ProjectDetails from './ProjectDetails';
 
 const ContactForm = () => {
 
@@ -52,16 +53,18 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="contact-container">
-            <div className="contact-header">
+        <div className={styles['contact-container']}> {/* Use styles['class-name'] */}
+            <div className={styles['contact-header']}>
                 <h1>Talk to our friendly sales team</h1>
                 <p>We'll help you find the perfect plan, no matter your business size.</p>
             </div>
 
-            <div className="contact-content">
-                <form className="contact-form" onSubmit={handleSubmit}>
-                    <div className="form-row">
-                        <div className="form-group">
+            <ProjectDetails />
+            <h2 className={styles['title']}>Your details</h2>
+            <div className={styles['contact-content']}>
+                <form className={styles['contact-form']} onSubmit={handleSubmit}>
+                    <div className={styles['form-row']}>
+                        <div className={styles['form-group']}>
                             <label htmlFor="firstName">First name *</label>
                             <input
                                 type="text"
@@ -73,7 +76,7 @@ const ContactForm = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group">
+                        <div className={styles['form-group']}>
                             <label htmlFor="lastName">Last name *</label>
                             <input
                                 type="text"
@@ -87,7 +90,7 @@ const ContactForm = () => {
                         </div>
                     </div>
 
-                    <div className="form-group">
+                    <div className={styles['form-group']}>
                         <label htmlFor="email">Email *</label>
                         <input
                             type="email"
@@ -100,11 +103,11 @@ const ContactForm = () => {
                         />
                     </div>
 
-                    <div className="form-group phone-group">
+                    <div className={`${styles['form-group']} ${styles['phone-group']}`}> {/* Combine classes */}
                         <label htmlFor="phone">Phone number</label>
-                        <div className="phone-input">
+                        <div className={styles['phone-input']}>
                             <select
-                                className="country-select"
+                                className={styles['country-select']}
                                 value={country}
                                 onChange={(e) => setCountry(e.target.value)}
                             >
@@ -124,8 +127,8 @@ const ContactForm = () => {
                         </div>
                     </div>
 
-                    <div className="form-group">
-                        <label htmlFor="message">Message *</label>
+                    <div className={styles['form-group']}>
+                        <label htmlFor="message">Leave a Message / Tell us about your project *</label>
                         <textarea
                             id="message"
                             name="message"
@@ -136,12 +139,12 @@ const ContactForm = () => {
                         ></textarea>
                     </div>
 
-                    <ServiceSelection
+                    {/* <ServiceSelection
                         services={formData.services}
                         handleServiceChange={handleServiceChange}
-                    />
+                    /> */}
 
-                    <button type="submit" className="submit-button">
+                    <button type="submit" className={styles['submit-button']}>
                         Send message
                     </button>
                 </form>

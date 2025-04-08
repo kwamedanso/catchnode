@@ -18,6 +18,12 @@
     --radius-lg: 0.75rem;
   }
 
+.title{
+  font-size: 1.125rem;
+  margin-block: 20px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 10px;
+}
 .contact-container {
     max-width: 1200px;
     margin: 5rem auto;
@@ -148,6 +154,7 @@
   @media (max-width: 640px) {
     .contact-container {
       padding: 2rem 1rem;
+      margin: 3rem 0.5rem;
     }
     
     .form-row {
