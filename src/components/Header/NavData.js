@@ -209,7 +209,7 @@ export const NavData = [
             {
                 title: 'About Us',
                 description: 'What we do best',
-                path: '/company/about-us',
+                path: '/about',
                 icon: GrContactInfo,
             },
             {
