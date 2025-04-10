@@ -7,6 +7,8 @@ import Loader from './components/Loader/Loader';
 const Home = lazy(() => import("../src/pages/Home"))
 const Services = lazy(() => import("../src/pages/Services"))
 const ContactUs = lazy(() => import("../src/pages/ContactUs"))
+const AboutUs = lazy(() => import("../src/pages/AboutUs"))
+
 import { fixTouchEvents } from './fixTouchEvents';
 
 
@@ -26,6 +28,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/services' element={<Services />} />
           <Route path='/contact' element={<ContactUs />} />
+          <Route path='/about' element={<AboutUs />} />
         </Routes>
         <Footer />
       </Suspense>
