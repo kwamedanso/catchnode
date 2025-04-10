@@ -1,0 +1,157 @@
+/* Base styles - Light Theme */
+.testimonialSection {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px; /* Increased margin */
+  font-weight: 600;
+}
+
+/* Avatar Styles */
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  /* Align items to the bottom allows avatars to "grow" upwards */
+  align-items: flex-end;
+  gap: 20px; /* Increased gap for clarity with larger active avatar */
+  margin-bottom: 50px; /* Increased margin */
+  min-height: 100px; /* Ensure container has height for alignment */
+  flex-wrap: wrap;
+}
+
+.avatar {
+  /* Standard smaller size for non-active avatars */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transition all properties */
+  opacity: 0.6; /* Make non-active ones more faded */
+}
+
+.avatar:hover {
+  opacity: 1;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Active avatar is significantly larger */
+.activeAvatar {
+  width: 90px;  /* << INCREASED SIZE */
+  height: 90px; /* << INCREASED SIZE */
+  border-color: #007bff;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  transform: scale(1); /* Override hover scale if needed, or keep it */
+}
+
+/* Make sure hover on active doesn't shrink it if base avatar has scale */
+.activeAvatar:hover {
+   transform: scale(1.05); /* Optional: slight grow on hover even if active */
+   /* Or remove transform: transform: none; */
+}
+
+
+/* Testimonial Content Area - Styles remain the same as previous version */
+.testimonialContentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 45px; /* Add padding for absolute buttons */
+}
+
+.testimonialContent {
+  flex-grow: 1;
+  padding: 0 10px; /* Reduced padding slightly */
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Animation Classes (Same as before) */
+@keyframes fadeIn { /* ... */ }
+@keyframes fadeOut { /* ... */ }
+.fadeIn { animation: fadeIn 0.3s ease-out forwards; }
+.fadeOut { animation: fadeOut 0.3s ease-in forwards; }
+
+/* Quote, Name, Title Styles (Same as before) */
+.quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 15px;
+}
+.quote::before { content: '“'; position: absolute; left: -5px; top: -10px; font-size: 2.5rem; color: #007bff; opacity: 0.2; }
+.name { font-size: 1.1rem; font-weight: 600; color: #333; margin: 0 0 5px 0; }
+.customerTitle { font-size: 0.9rem; color: #777; margin: 0; }
+
+/* Navigation Buttons (Same as before) */
+.navButton {
+  background-color: #e9ecef;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  position: absolute; /* Keep absolute for small screens */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.prevButton { left: 0px; }
+.nextButton { right: 0px; }
+
+.navButton:hover:not(:disabled) { background-color: #007bff; color: #fff; transform: translateY(-50%) scale(1.1); } /* Adjust transform */
+.navButton:disabled { opacity: 0.5; cursor: not-allowed; }
+
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+  .title { font-size: 1.8rem; }
+  .avatarContainer { gap: 15px; min-height: 85px; margin-bottom: 40px; }
+  .avatar { width: 45px; height: 45px; }
+  .activeAvatar { width: 75px; height: 75px; } /* Adjust active size */
+  .quote { font-size: 1rem; }
+  .name { font-size: 1rem; }
+  .testimonialContent { min-height: 160px; }
+  .navButton { width: 35px; height: 35px; font-size: 1.3rem; line-height: 35px; }
+  .testimonialContentWrapper { padding: 0 40px; } /* Adjust padding */
+}
+
+@media (max-width: 576px) {
+  .title { font-size: 1.6rem; margin-bottom: 30px; }
+  .avatarContainer { gap: 10px; min-height: 70px; margin-bottom: 30px; }
+  .avatar { width: 40px; height: 40px; }
+  .activeAvatar { width: 65px; height: 65px; } /* Further adjust active size */
+  .quote { font-size: 0.95rem; }
+  .name { font-size: 0.95rem; }
+  .customerTitle { font-size: 0.85rem; }
+  .testimonialContent { min-height: auto; } /* Allow height shrink */
+  .testimonialContentWrapper { padding: 0 35px; } /* Adjust padding */
+  .navButton { width: 30px; height: 30px; font-size: 1.1rem; line-height: 30px; }
+}

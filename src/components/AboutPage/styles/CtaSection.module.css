@@ -1,0 +1,90 @@
+/* Base container styles - Light Theme */
+.ctaContainer {
+    background-color: #f8f9fa; /* Light grey background */
+    /* Or a very light blue: background-color: #eef3f6; */
+    padding: 50px 20px;      /* Vertical and horizontal padding */
+    text-align: center;        /* Center align text and button */
+    border-radius: 6px;        /* Slightly rounded corners */
+    margin: 30px auto;         /* Margin for spacing in a page */
+    max-width: 1000px;        /* Max width of the section */
+  }
+  
+  /* Heading styles */
+  .heading {
+    font-size: 2.1rem; /* Adjust size as needed */
+    font-weight: 600;
+    color: #343a40; /* Dark grey text */
+    margin-top: 0;
+    margin-bottom: 10px; /* Space below heading */
+    line-height: 1.3;
+  }
+  
+  /* Subheading styles */
+  .subheading {
+    font-size: 1.05rem;
+    color: #6c757d; /* Medium grey text */
+    margin-bottom: 25px; /* Space below subheading */
+    max-width: 550px; /* Limit width for better readability */
+    margin-left: auto;   /* Center the subheading block */
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  /* Button Styles */
+  .ctaButton {
+    display: inline-block;   /* Treat as a block for padding/margin but flows inline */
+    background-color: #007bff; /* Example primary blue color */
+    color: #ffffff;          /* White text */
+    padding: 10px 30px;      /* Button padding (top/bottom, left/right) */
+    border-radius: 20px;     /* Rounded corners for a softer look */
+    text-decoration: none;   /* Remove underline from anchor tag */
+    font-weight: 500;        /* Medium font weight */
+    font-size: 1rem;
+    border: none;            /* Remove border if using <button> */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover */
+  }
+  
+  /* Button Hover/Focus State */
+  .ctaButton:hover,
+  .ctaButton:focus {
+    background-color: #0056b3; /* Darker shade on hover/focus */
+    transform: translateY(-2px); /* Slight lift effect */
+    outline: none; /* Optional: remove default focus outline */
+  }
+  
+  /* --- Responsive Adjustments --- */
+  
+  /* Tablet */
+  @media (max-width: 768px) {
+    .ctaContainer {
+      padding: 40px 20px;
+    }
+    .heading {
+      font-size: 1.9rem;
+    }
+    .subheading {
+      font-size: 1rem;
+    }
+    .ctaButton {
+      padding: 10px 28px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 576px) {
+    .ctaContainer {
+      padding: 30px 15px; /* Reduce padding on small screens */
+    }
+    .heading {
+      font-size: 1.6rem; /* Further reduce heading size */
+    }
+    .subheading {
+      font-size: 0.9rem; /* Further reduce subheading size */
+    }
+    .ctaButton {
+      padding: 9px 22px; /* Adjust button padding */
+      font-size: 0.9rem;
+    }
+  }

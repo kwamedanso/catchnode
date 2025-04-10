@@ -1,0 +1,62 @@
+
+
+.headings{
+    text-align: center;
+    margin-block: 3rem;
+}
+
+
+.headings h3{
+    font-size: 2.5rem;
+}
+
+.headings p{
+    color: #464646;
+    margin-block-start: 2rem;
+}
+.reactoutCards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.reachoutCard{
+display: flex;
+gap: 1rem;
+align-items: center;
+padding: 30px;
+border-radius: 10px;
+background-color: white;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.reachoutCard svg{
+    font-size: 2rem;
+}
+
+.reachoutCard .cardTitle{
+    font-weight: 450;
+}
+
+.reachoutCard .cardDesc{
+    margin-top: .2rem;
+    color: #464646;
+    font-size: .9rem;
+    white-space: nowrap;
+}
+@media screen and (max-width: 650px) {
+    .reactoutCards{
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
+    .reachoutCard{
+        width: 300px;
+        align-self: center;
+    }
+
+    .reachoutCard .cardDesc{
+        font-size: .9rem;
+    }
+}
