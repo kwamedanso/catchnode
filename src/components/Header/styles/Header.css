@@ -24,6 +24,10 @@
     padding: 0 20px;
   }
   
+  .header-logo-link {
+    text-decoration: none;
+    display: block;
+  }
   .desktop-nav {
     display: flex;
     align-items: center;
