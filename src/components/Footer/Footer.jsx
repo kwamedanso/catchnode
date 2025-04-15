@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/Footer.css';
 import LogoWithTriangle from './LogoWithTriangle';
+import logo from "../../assets/Catchnode .png"
 
 
 const Footer = () => {
@@ -9,8 +10,11 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-main">
                     <div className="footer-logo">
-                        <LogoWithTriangle />
-                        <p className="footer-contact">contact@navitek.com</p>
+                        {/* <LogoWithTriangle /> */}
+                        <div className="footer-logo-container">
+                            <img src={logo} alt="CatchNode logo" className="footer-logo-img" />
+                        </div>
+                        <p className="footer-contact">info@catchnode.com</p>
                     </div>
 
                     <div className="footer-links">

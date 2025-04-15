@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavData } from './NavData';
 import NavItem from './NavItem/NavItem';
 import Logo from '../Logo/Logo';
+import catchnodeLogo from "../../assets/Catchnode 2 .png"
 import MobileMenu from './MobileMenu/MobileMenu';
 import { Link } from 'react-router-dom';
 import './styles/Header.css';
@@ -48,7 +49,10 @@ const Header = () => {
     return (
         <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
             <div className="header-container">
-                <Logo />
+                {/* <Logo /> */}
+                <div className='header-logo-container'>
+                    <img className='header-logo-img' src={catchnodeLogo} alt="" />
+                </div>
 
                 <nav className="desktop-nav">
                     <ul className="nav-list">

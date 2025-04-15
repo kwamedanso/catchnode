@@ -7,7 +7,7 @@ const LogoWithTriangle = () => {
     return (
         <a href="/" className="logo-link">
             <div className="logo-with-triangle">
-                <span className="logo-text">NaviTek</span>
+                <span className="logo-text">CatchNode</span>
                 <TbNavigationFilled className='logo-svg-icon' />
             </div>
         </a>

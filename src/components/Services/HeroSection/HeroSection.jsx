@@ -27,7 +27,7 @@ const HeroSection = () => {
         <section className={styles.section} ref={heroRef}>
             <div className={styles.content}>
                 <h1 className={`${styles.title} ${isLoaded ? styles.animated : ''}`}>
-                    NaviTek Software
+                    CatchNode Software
                     <br />
                     Development Services
                 </h1>
