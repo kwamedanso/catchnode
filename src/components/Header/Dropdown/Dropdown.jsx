@@ -23,12 +23,13 @@ const Dropdown = ({ items, industriesSection, technologiesSection, setIsDropdown
                     </div>
                     <div className="dropdown-items">
                         {items.map((item, index) => (
-                            <a
+                            <Link
                                 key={index}
-                                href={item.path}
+                                to={item.path}
                                 className="dropdown-item"
                                 target={item.isExternal ? "_blank" : "_self"}
                                 rel={item.isExternal ? "noopener noreferrer" : ""}
+                                onClick={closeDropDown}
                             >
                                 <div className="dropdown-item-icon">
                                     <item.icon />
@@ -38,7 +39,7 @@ const Dropdown = ({ items, industriesSection, technologiesSection, setIsDropdown
                                     <p className="dropdown-item-description">{item.description}</p>
                                 </div>
                                 {item.isExternal && <RiShareBoxFill />}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -51,10 +52,10 @@ const Dropdown = ({ items, industriesSection, technologiesSection, setIsDropdown
                             </div>
                             <div className="dropdown-additional-items">
                                 {industriesSection.items.map((item, index) => (
-                                    <a key={index} href={item.path} className="dropdown-additional-item">
+                                    <Link key={index} to={item.path} className="dropdown-additional-item">
                                         <item.icon />
                                         <span>{item.title}</span>
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -67,10 +68,10 @@ const Dropdown = ({ items, industriesSection, technologiesSection, setIsDropdown
                             </div>
                             <div className="dropdown-additional-items">
                                 {technologiesSection.items.map((item, index) => (
-                                    <a key={index} href={item.path} className="dropdown-additional-item">
+                                    <Link key={index} to={item.path} className="dropdown-additional-item" onClick={closeDropDown}>
                                         <item.icon />
                                         <span>{item.title}</span>
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

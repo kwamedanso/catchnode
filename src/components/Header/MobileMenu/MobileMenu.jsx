@@ -26,8 +26,8 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                     {navItems.map((item, index) => (
                         <li key={index} className="mobile-menu-item">
                             <div className="mobile-menu-item-header">
-                                <a
-                                    href={item.path}
+                                <Link
+                                    to={item.path}
                                     className="mobile-menu-link"
                                     onClick={(e) => {
                                         if (item.hasChildren) {
@@ -37,7 +37,7 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                                     }}
                                 >
                                     {item.title}
-                                </a>
+                                </Link>
                                 {item.hasChildren && (
                                     <button
                                         className={`mobile-submenu-toggle ${expandedItems[index] ? 'active' : ''}`}
@@ -57,7 +57,7 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                                     <ul className="mobile-submenu-list">
                                         {item.children.map((child, childIndex) => (
                                             <li key={childIndex} className="mobile-submenu-item">
-                                                <a href={child.path} className="mobile-submenu-link">
+                                                <Link to={child.path} className="mobile-submenu-link" onClick={closeMobileMenu}>
                                                     <div className="mobile-submenu-icon">
                                                         <child.icon />
                                                     </div>
@@ -65,7 +65,7 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                                                         <h3 className="mobile-submenu-item-title">{child.title}</h3>
                                                         <p className="mobile-submenu-item-description">{child.description}</p>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
@@ -78,10 +78,10 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                                             <ul className="mobile-submenu-section-list">
                                                 {item.industriesSection.items.map((industry, industryIndex) => (
                                                     <li key={industryIndex} className="mobile-submenu-section-item">
-                                                        <a href={industry.path} className="mobile-submenu-section-link">
+                                                        <Link to={industry.path} className="mobile-submenu-section-link" onClick={closeMobileMenu}>
                                                             <industry.icon />
                                                             <span>{industry.title}</span>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -96,10 +96,10 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                                             <ul className="mobile-submenu-section-list">
                                                 {item.technologiesSection.items.map((tech, techIndex) => (
                                                     <li key={techIndex} className="mobile-submenu-section-item">
-                                                        <a href={tech.path} className="mobile-submenu-section-link">
+                                                        <Link to={tech.path} className="mobile-submenu-section-link" onClick={closeMobileMenu}>
                                                             <tech.icon />
                                                             <span>{tech.title}</span>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -112,9 +112,9 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                 </ul>
 
                 <div className="mobile-menu-footer">
-                    <a href="/contact" className="btn btn-primary mobile-contact-btn">
+                    <Link to="/contact" className="btn btn-primary mobile-contact-btn" onClick={closeMobileMenu}>
                         Contact us
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
