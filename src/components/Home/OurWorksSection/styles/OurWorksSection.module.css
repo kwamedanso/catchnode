@@ -3,7 +3,7 @@
 
 .our_works_section {
   max-width: 1200px;
-  margin: 0 5rem;
+  margin: 0 auto;
   padding: 80px 20px;
   opacity: 0;
   transform: translateY(30px);
