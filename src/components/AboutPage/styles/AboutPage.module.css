@@ -1,6 +1,6 @@
 .aboutContainer {
     max-width: 1200px;
-    margin: 6rem auto 0;
+    margin: 6rem auto;
     padding: 0 1rem;
   }
   
@@ -107,7 +107,9 @@
   
   /* Why Choose Us Section */
   .chooseSection {
-    margin-bottom: 4rem;
+    margin-block: 4rem;
+    padding: 2rem 1rem;
+    background-color: #f6f9fd;
   }
   
   .benefitsContainer {
@@ -117,6 +119,9 @@
   }
   
   @media (min-width: 576px) {
+    .chooseSection{
+      padding: 2rem;
+    }
     .benefitsContainer {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -186,9 +191,10 @@
     }
 
     .aboutContainer {
-        margin: 6rem 5rem 0;
+        margin: 7rem auto;
         padding: 0 1rem;
       }
+
   }
   
   .timelineItem {
@@ -225,6 +231,8 @@
   
   /* Team Section */
   .teamSection {
+    background-color: #f6f9fd;
+    padding: 3rem 2rem;
     margin-bottom: 4rem;
   }
   
@@ -279,7 +287,7 @@
   }
   
   /* Testimonials Section */
-  .testimonialsSection {
+  /* .testimonialsSection {
     margin-bottom: 4rem;
   }
   
@@ -325,43 +333,4 @@
   .testimonialAuthor p {
     font-size: 0.9rem;
     color: #666;
-  }
-  
-  /* CTA Section */
-  .ctaSection {
-    background-color: #4285f4;
-    color: white;
-    padding: 3rem 2rem;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 4rem;
-  }
-  
-  .ctaSection h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .ctaSection p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-  }
-  
-  .ctaButton {
-    background-color: white;
-    color: #4285f4;
-    border: none;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .ctaButton:hover {
-    background-color: #f0f4ff;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+  } */

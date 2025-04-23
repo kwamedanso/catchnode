@@ -1,17 +1,13 @@
 import React from 'react';
 import styles from './styles/CtaSection.module.css'; // Import CSS Module
+import { Link } from 'react-router-dom';
 
 const CtaSection = () => {
     return (
-        <section className={styles.ctaContainer}>
-            <h2 className={styles.heading}>Get more clicks, grow your business</h2>
-            <p className={styles.subheading}>
-                Simple tools and smart insights to help you engage your audience.
-            </p>
-            {/* Use an anchor tag <a> if it links somewhere, or <button> for an action */}
-            <a href="#get-started" className={styles.ctaButton}>
-                Get Started
-            </a>
+        <section className={styles.ctaSection}>
+            <h2>Ready to Transform Your Digital Presence?</h2>
+            <p>Let's create something amazing together</p>
+            <Link to={"/contact"} className={styles.ctaButton}>Let's Work Together</Link>
         </section>
     );
 };

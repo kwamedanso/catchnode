@@ -1,9 +1,13 @@
 import React from 'react';
+import Testimonials from "../Home/Testimonials/Testimonials"
 import styles from './styles/AboutPage.module.css';
 import image1 from "../../assets/team-member-1.jpg"
 import image2 from "../../assets/team-member-2.jpg"
 import image3 from "../../assets/team-member-3.jpg"
 import aboutImage from "../../assets/aboutpage.jpg"
+import HeroSection from './HeroSection';
+import CtaSection from './CtaSection';
+
 
 const AboutPage = () => {
     const teamMembers = [
@@ -49,11 +53,12 @@ const AboutPage = () => {
 
     return (
         <div className={styles.aboutContainer}>
+            <HeroSection />
             {/* Hero Section */}
-            <section className={styles.heroSection}>
+            {/* <section className={styles.heroSection}>
                 <h1 className={styles.heroTitle}>About Us</h1>
                 <p className={styles.heroSubtitle}>Crafting Digital Excellence Through Innovation</p>
-            </section>
+            </section> */}
 
             {/* Our Story Section */}
             <section className={styles.storySection}>
@@ -168,7 +173,8 @@ const AboutPage = () => {
             </section>
 
             {/* Testimonials Section */}
-            <section className={styles.testimonialsSection}>
+            <Testimonials />
+            {/* <section className={styles.testimonialsSection}>
                 <h2 className={styles.sectionTitle}>Client Testimonials</h2>
                 <div className={styles.testimonialsGrid}>
                     {testimonials.map((testimonial, index) => (
@@ -182,14 +188,10 @@ const AboutPage = () => {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section */}
-            <section className={styles.ctaSection}>
-                <h2>Ready to Transform Your Digital Presence?</h2>
-                <p>Let's create something amazing together</p>
-                <button className={styles.ctaButton}>Let's Work Together</button>
-            </section>
+            <CtaSection />
         </div>
     );
 };
