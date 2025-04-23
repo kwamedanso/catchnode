@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavData } from './NavData';
 import NavItem from './NavItem/NavItem';
 import Logo from '../Logo/Logo';
-import catchnodeLogo from "../../assets/Catchnode 2 .png"
+import catchnodeLogo from "../../assets/Catchnode logo .png"
 import MobileMenu from './MobileMenu/MobileMenu';
 import { Link } from 'react-router-dom';
 import './styles/Header.css';
