@@ -2,11 +2,13 @@ import React, { useEffect, useRef } from 'react';
 import TemplateCard from './TemplateCard';
 import styles from './styles/Templates.module.css';
 import { MdOutlineImagesearchRoller, MdOutlinePlumbing, MdOutlineConstruction, MdOutlineElectricalServices } from "react-icons/md";
-
+import { Link } from 'react-router-dom';
 import plumber from "../../../assets/plumber.webp"
 import electrician from "../../../assets/electrician.webp"
 import constructionWorker from "../../../assets/construction-worker.webp"
 import painter from "../../../assets/painter.webp"
+
+
 
 const Templates = () => {
     const sectionRef = useRef(null);
@@ -90,7 +92,7 @@ const Templates = () => {
             </div>
 
             <div className={styles.templates_button_container}>
-                <button className={styles.browse_button}>Browse template library</button>
+                <Link to={"/templates"} className={styles.browse_button}>Browse template library</Link>
             </div>
         </section>
     );
