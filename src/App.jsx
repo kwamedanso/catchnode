@@ -8,6 +8,8 @@ const Home = lazy(() => import("../src/pages/Home"))
 const Services = lazy(() => import("../src/pages/Services"))
 const ContactUs = lazy(() => import("../src/pages/ContactUs"))
 const AboutUs = lazy(() => import("../src/pages/AboutUs"))
+const AllTemplates = lazy(() => import("./pages/AllTemplates.jsx"))
+const TemplatePage = lazy(() => import("./pages/TemplatePage.jsx"))
 
 import { fixTouchEvents } from './fixTouchEvents';
 
@@ -29,6 +31,9 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/contact' element={<ContactUs />} />
           <Route path='/about' element={<AboutUs />} />
+          <Route path="/templates" element={<AllTemplates />} />
+          <Route path='/template/:id' element={<AllTemplates />} />
+          <Route path='/templates/plumber1' element={<TemplatePage />} />
         </Routes>
         <Footer />
       </Suspense>
