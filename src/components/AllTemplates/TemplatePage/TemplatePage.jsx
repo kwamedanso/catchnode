@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp, FiUser, FiClock, FiEye, FiArrowRight } from 'react-icons/fi';
-import { BsLaptop, BsPhone } from 'react-icons/bs';
+import { BsLaptop } from 'react-icons/bs';
 import { AiOutlineCheck, AiOutlinePlus } from 'react-icons/ai';
 import { FaRegNewspaper } from "react-icons/fa";
 import { GoVersions } from "react-icons/go";
