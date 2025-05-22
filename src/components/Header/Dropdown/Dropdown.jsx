@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Dropdown = ({ items, industriesSection, technologiesSection, setIsDropdownOpen }) => {
+const Dropdown = ({ title, path, items, industriesSection, technologiesSection, setIsDropdownOpen }) => {
 
     function closeDropDown() {
         setIsDropdownOpen(false)
@@ -16,8 +16,8 @@ const Dropdown = ({ items, industriesSection, technologiesSection, setIsDropdown
             <div className="dropdown-content">
                 <div className="dropdown-main-section">
                     <div className="dropdown-header">
-                        <Link to="/services" className='dropdown-title' onClick={closeDropDown}>
-                            SERVICES
+                        <Link to={path} className='dropdown-title' onClick={closeDropDown}>
+                            {title}
                         </Link>
                         <FiArrowRight />
                     </div>

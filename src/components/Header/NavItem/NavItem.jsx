@@ -55,6 +55,8 @@ const NavItem = ({ item }) => {
 
             {item.hasChildren && isDropdownOpen && (
                 <Dropdown
+                    title={item.title}
+                    path={item.path}
                     items={item.children}
                     industriesSection={item.industriesSection}
                     technologiesSection={item.technologiesSection}
