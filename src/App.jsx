@@ -10,6 +10,7 @@ const ContactUs = lazy(() => import("../src/pages/ContactUs"))
 const AboutUs = lazy(() => import("../src/pages/AboutUs"))
 const AllTemplates = lazy(() => import("./pages/AllTemplates.jsx"))
 const TemplatePage = lazy(() => import("./pages/TemplatePage.jsx"))
+const ProductsPage = lazy(() => import("./pages/ProductsPage.jsx"))
 
 import { fixTouchEvents } from './fixTouchEvents';
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/templates" element={<AllTemplates />} />
           <Route path='/template/:id' element={<AllTemplates />} />
           <Route path='/templates/plumber1' element={<TemplatePage />} />
+          <Route path='/products' element={<ProductsPage />} />
         </Routes>
         <Footer />
       </Suspense>
