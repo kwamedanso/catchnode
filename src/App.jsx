@@ -11,6 +11,9 @@ const AboutUs = lazy(() => import("../src/pages/AboutUs"))
 const AllTemplates = lazy(() => import("./pages/AllTemplates.jsx"))
 const TemplatePage = lazy(() => import("./pages/TemplatePage.jsx"))
 const ProductsPage = lazy(() => import("./pages/ProductsPage.jsx"))
+const TemplateGallery = lazy(() => import("./components/AllTemplates/TemplateGallery.jsx"))
+const TemplateCategories = lazy(() => import("./components/AllTemplates/TemplateCategories.jsx"))
+const TemplatesFilter = lazy(() => import("./components/AllTemplates/TemplatesFilter.jsx"))
 
 import { fixTouchEvents } from './fixTouchEvents';
 
@@ -35,6 +38,8 @@ function App() {
           <Route path="/templates" element={<AllTemplates />} />
           <Route path='/template/:id' element={<AllTemplates />} />
           <Route path='/templates/plumber1' element={<TemplatePage />} />
+          <Route path='/templates/categories' element={<TemplateCategories />} />
+          <Route path='/templates/all' element={<TemplatesFilter />} />
           <Route path='/products' element={<ProductsPage />} />
         </Routes>
         <Footer />
