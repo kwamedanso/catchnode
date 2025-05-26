@@ -10,8 +10,8 @@ const servicesData = [
     {
         id: 2,
         icon: FaAngular,
-        title: 'Angular Development',
-        description: 'Our expert Angular developers create robust, scalable applications using the latest features.'
+        title: 'Website Maintainance and Support',
+        description: 'Providing ongoing services to ensure websites are up-to-date, secure, and functioning correctly, including updates, bug fixes, and technical support.'
     },
     {
         id: 3,
@@ -21,21 +21,21 @@ const servicesData = [
     },
     {
         id: 4,
-        icon: FaReact,
-        title: 'React.js Development',
-        description: 'We create interactive and responsive web applications using the latest React.js features and tools.'
+        icon: FaCode,
+        title: 'E-commerce Development',
+        description: 'Creating online stores with features like product catalogs, shopping carts, payment gateway integration, and order management.'
     },
     {
         id: 5,
-        icon: FaCode,
-        title: 'Low-code/No-code Development',
-        description: 'We leverage low-code platforms to create tools and solutions for companies seeking flexibility.'
+        icon: FaReact,
+        title: 'Content Management Systems (CMS)',
+        description: 'Building websites using platforms like WordPress, Drupal, or developing custom CMS solutions to allow clients to easily manage their website content.'
     },
     {
         id: 6,
         icon: FaReact,
-        title: 'React Native Development',
-        description: 'Let\'s build a single codebase application that seamlessly runs on iOS and Android platforms.'
+        title: 'Web Hosting and Deployment',
+        description: 'Assisting with the setup and deployment of websites on web servers.'
     },
     {
         id: 7,
@@ -57,21 +57,22 @@ const servicesData = [
     },
     {
         id: 10,
-        icon: FaFileAlt,
-        title: 'QA Services',
-        description: 'We deliver QA team needs as its 24/7 job is to ensure your software is fully functional prior to deployment.'
-    },
-    {
-        id: 11,
         icon: FaCode,
         title: 'Webflow Development',
         description: 'We can help you create and implement custom Webflow websites with modern design.'
     },
     {
+        id: 11,
+        icon: FaFileAlt,
+        title: 'Front-End Development',
+        description: 'Focusing on the client-side of web applications, using technologies like HTML, CSS, and JavaScript to create the user interface and interactive elements.'
+    },
+
+    {
         id: 12,
         icon: FaDatabase,
-        title: 'Big Data Development',
-        description: 'We provide big data analytics services for healthcare, fintech, logistics, telecom and many other industries.'
+        title: 'IT Consulting',
+        description: 'Providing expert advice and guidance on technology strategies, software solutions, and IT infrastructure.'
     }
 ];
 
