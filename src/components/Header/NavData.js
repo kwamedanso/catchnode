@@ -60,12 +60,12 @@ export const NavData = [
                 path: '/services',
                 icon: TbCloudDown,
             },
-            {
-                title: 'Content Management Systems (CMS)',
-                description: 'The power of innovations',
-                path: '/services',
-                icon: TbBox,
-            },
+            // {
+            //     title: 'Content Management Systems (CMS)',
+            //     description: 'The power of innovations',
+            //     path: '/services',
+            //     icon: TbBox,
+            // },
             {
                 title: 'E-commerce Development',
                 description: 'Unlocking new possibilities',
@@ -203,7 +203,7 @@ export const NavData = [
     },
     {
         title: 'Company',
-        path: '/company',
+        path: '/about',
         hasChildren: true,
         children: [
             {
