@@ -27,9 +27,9 @@ const HeroSection = () => {
         <section className={styles.section} ref={heroRef}>
             <div className={styles.content}>
                 <h1 className={`${styles.title} ${isLoaded ? styles.animated : ''}`}>
-                    CatchNode Software
+                    Elevate Your Business with Our Web,
                     <br />
-                    Development Services
+                    Cloud & IT Services
                 </h1>
                 <p className={`${styles.description} ${isLoaded ? styles.animated : ''}`}>
                     Are you looking for a reliable team of software development
