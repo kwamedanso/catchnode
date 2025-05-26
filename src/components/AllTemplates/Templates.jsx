@@ -6,9 +6,92 @@ import constructionWorker from "../../assets/construction-worker.webp"
 import painter from "../../assets/painter.webp"
 import styles from './styles/Templates.module.css';
 import { Link } from 'react-router-dom';
+import TemplateCard from './TemplateCard';
+
+
 
 export default function Templates() {
     const [activeTab, setActiveTab] = useState('Trending');
+
+    const templateData = [
+        {
+            "images": [
+                plumber, electrician, constructionWorker, painter
+            ],
+            "title": "E-commerce Template",
+            "industry": "E-commerce",
+            "pages": 12,
+            "hasBooking": false,
+            "rating": 4.8,
+            "price": "Premium Template"
+        },
+        {
+            "images": [
+                constructionWorker, painter
+            ],
+            "title": "Construction Industry Template",
+            "industry": "Education",
+            "pages": 6,
+            "hasBooking": false,
+            "rating": 4.5,
+            "price": "Standard"
+        },
+        {
+            "images": [
+                painter, plumber
+            ],
+            "title": "Painter Template",
+            "industry": "Healthcare",
+            "pages": 10,
+            "hasBooking": true,
+            "rating": 4.9,
+            "price": "Premium"
+        },
+        {
+            "images": [
+                electrician, constructionWorker
+            ],
+            "title": "Electrician Template",
+            "industry": "Construction",
+            "pages": 7,
+            "hasBooking": false,
+            "rating": 4.6,
+            "price": "Basic"
+        },
+        {
+            "images": [
+                plumber, electrician
+            ],
+            "title": "Plumber Template",
+            "industry": "Trades",
+            "pages": 5,
+            "hasBooking": true,
+            "rating": 4.7,
+            "price": "Standard"
+        },
+        {
+            "images": [
+                painter, constructionWorker
+            ],
+            "title": "Restaurant Template",
+            "industry": "Technology",
+            "pages": 9,
+            "hasBooking": false,
+            "rating": 4.9,
+            "price": "Premium"
+        },
+        {
+            "images": [
+                electrician, plumber
+            ],
+            "title": "Electrician Template",
+            "industry": "Food & Beverage",
+            "pages": 4,
+            "hasBooking": true,
+            "rating": 4.4,
+            "price": "Basic"
+        }
+    ]
 
     const tabOptions = [
         { id: 'Trending', label: 'Trending' },
@@ -69,8 +152,8 @@ export default function Templates() {
     ];
 
     const filteredPages = activeTab === 'Trending'
-        ? pageTypes.filter(page => page.tags.includes('Trending'))
-        : pageTypes.filter(page => page.tags.includes(activeTab));
+        ? templateData.filter(data => data.title.includes('Trending'))
+        : templateData.filter(data => data.title.includes(activeTab));
 
     return (
         <div className={styles.container}>
@@ -92,27 +175,9 @@ export default function Templates() {
             </div>
 
             <div className={styles.cardsGrid}>
-                {filteredPages.map(page => (
-                    <div key={page.id} className={styles.card}>
-                        <div className={styles.cardHeader}>
-                            <div className={styles.iconWrapper}>
-                                {page.icon}
-                            </div>
-                            <div className={styles.cardInfo}>
-                                <h3 className={styles.cardTitle}>{page.title}</h3>
-                                <p className={styles.screenCount}>{page.screens} pages</p>
-                            </div>
-                        </div>
-                        <div className={styles.imageContainer}>
-                            <Link to={"/templates/plumber1"}>
-                                <img
-                                    src={page.image}
-                                    alt={page.title}
-                                    className={styles.cardImage}
-                                />
-                            </Link>
-                        </div>
-                    </div>
+                {templateData.map((template, index) => (
+                    <TemplateCard key={index} {...template} />
+
                 ))}
             </div>
         </div>

@@ -1,0 +1,205 @@
+.container {
+    margin: 4rem auto;
+    display: flex;
+    min-height: 100vh;
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  .sidebar {
+    width: 280px;
+    background-color: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 24px 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .searchContainer {
+    position: relative;
+    margin: 0 20px 24px;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 16px;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 12px 12px 12px 36px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .searchInput:focus {
+    border-color: #3b82f6;
+  }
+  
+  .navigation {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  
+  .navItem:hover {
+    background-color: #f9fafb;
+    color: #1f2937;
+  }
+  
+  .navItemActive {
+    background-color: #eff6ff;
+    color: #3b82f6;
+    border-left-color: #3b82f6;
+  }
+  
+  .navIcon {
+    margin-right: 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navText {
+    flex: 1;
+  }
+  
+  .main {
+    flex: 1;
+    margin-left: 280px;
+    padding: 32px;
+  }
+  
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumbLink {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .breadcrumbLink:hover {
+    color: #1d4ed8;
+  }
+  
+  .breadcrumbCurrent {
+    color: #6b7280;
+  }
+  
+  .breadcrumbSeparator {
+    margin: 0 8px;
+    color: #9ca3af;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 32px;
+  }
+  
+  .templatesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 32px;
+    justify-items: center;
+  }
+  
+  .templateLink {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .templateLink:hover {
+    transform: translateY(-4px);
+  }
+  
+  @media (max-width: 1200px) {
+    /* .templatesGrid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 24px;
+    } */
+    
+    .templateLink {
+      max-width: 280px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .main {
+      margin-left: 0;
+      padding: 20px 16px;
+    }
+    
+    .title {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+    
+    /* .templatesGrid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    } */
+    
+    .templateLink {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main {
+      padding: 16px 12px;
+    }
+    
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .breadcrumbs {
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+    
+    /* .templatesGrid {
+      gap: 16px;
+    } */
+  }
