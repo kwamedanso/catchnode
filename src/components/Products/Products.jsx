@@ -6,6 +6,13 @@ import image from "../../assets/electrician.webp"
 const Products = () => {
     return (
         <>
+            <section className={styles.heroSection}>
+                <div className={styles.heroHeader}>
+                    <h1 className={styles.heroTitle}>
+                        Products tailor-made for our clients
+                    </h1>
+                </div>
+            </section>
             <section className={styles.nebularSection}>
                 <div className={styles.container}>
                     <div className={styles.leftContent}>
