@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-    IoSearchSharp, IoGridOutline, IoStarOutline, IoGiftOutline, IoHammerOutline, IoColorPaletteOutline, IoNewspaperOutline, IoPeopleOutline, IoDocumentTextOutline, IoSchoolOutline, IoLeafOutline, IoRestaurantOutline, IoBusinessOutline, IoPeopleCircleOutline
+    IoSearchSharp, IoGridOutline, IoStarOutline, IoGiftOutline, IoHammerOutline, IoColorPaletteOutline, IoNewspaperOutline, IoPeopleOutline, IoDocumentTextOutline, IoSchoolOutline, IoLeafOutline, IoRestaurantOutline, IoBusinessOutline, IoPeopleCircleOutline, IoChevronDown
 } from 'react-icons/io5';
 import TemplateCard from './TemplateCard';
 import styles from './styles/TemplatesFilter.module.css';
@@ -21,6 +21,7 @@ import technology from "../../assets/it.webp"
 import { Link } from 'react-router-dom';
 
 const TemplatesFilter = () => {
+    const [showNavigation, setshowNavigation] = useState(false)
     const sidebarItems = [
         { name: 'All', icon: <IoGridOutline />, href: '/templates/all', active: true },
         { name: 'Featured', icon: <IoStarOutline />, href: '/templates/featured' },
@@ -196,9 +197,37 @@ const TemplatesFilter = () => {
 
                 <h1 className={styles.title}>All Website Templates</h1>
 
+                <div className={styles.categoryNavigation}>
+                    <div className={styles.searchContainer}>
+                        <IoSearchSharp className={styles.searchIcon} />
+                        <input
+                            type="text"
+                            placeholder="Search for templates"
+                            className={styles.searchInput}
+                        />
+                    </div>
+                    <button className={styles.categoriesButton} onClick={() => setshowNavigation(!showNavigation)}>
+                        <div>Categories</div>
+                        <div><IoChevronDown /></div>
+                    </button>
+
+                    {showNavigation ? <nav className={styles.navigation}>
+                        {sidebarItems.map((item, index) => (
+                            <a
+                                key={index}
+                                href={item.href}
+                                className={`${styles.navItem} ${item.active ? styles.navItemActive : ''}`}
+                            >
+                                <span className={styles.navIcon}>{item.icon}</span>
+                                <span className={styles.navText}>{item.name}</span>
+                            </a>
+                        ))}
+                    </nav> : null}
+                </div>
+
                 <div className={styles.templatesGrid}>
                     {templates.map((template) => (
-                        <TemplateCard {...template} />
+                        <TemplateCard {...template} key={template.id} />
                     ))}
                 </div>
             </div>
