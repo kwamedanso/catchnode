@@ -50,7 +50,7 @@ const Header = () => {
         <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
             <div className="header-container">
                 {/* <Logo /> */}
-                <Link to={"/"} className='header-logo-link'>
+                <Link to={"/"} className='header-logo-link' onClick={() => setIsMobileMenuOpen(false)}>
                     <div className='header-logo-container'>
                         <img className='header-logo-img' src={catchnodeLogo} alt="" />
                     </div>
