@@ -234,7 +234,7 @@ const TemplateGallery = () => {
 
                 <div className={styles.templatesGrid}>
                     {featuredTemplates.map((template) => (
-                        <TemplateCard {...template} />
+                        <TemplateCard {...template} key={template.id} />
                     ))}
                 </div>
             </section>
@@ -250,7 +250,7 @@ const TemplateGallery = () => {
 
                 <div className={styles.templatesGrid}>
                     {newTemplates.map((template) => (
-                        <TemplateCard {...template} />
+                        <TemplateCard {...template} key={template.id} />
                     ))}
                 </div>
             </section>
@@ -266,7 +266,7 @@ const TemplateGallery = () => {
 
                 <div className={styles.templatesGrid}>
                     {freeTemplates.map((template) => (
-                        <TemplateCard {...template} />
+                        <TemplateCard {...template} key={template.id} />
                     ))}
                 </div>
             </section>
