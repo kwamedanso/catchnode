@@ -9,7 +9,9 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
 
     function closeMobileMenu(paams) {
         setIsMobileMenuOpen(false)
+        setExpandedItems({})
     }
+
     const toggleSubmenu = (index) => {
         setExpandedItems(prev => ({
             ...prev,
@@ -33,6 +35,8 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                                         if (item.hasChildren) {
                                             e.preventDefault();
                                             toggleSubmenu(index);
+                                        } else {
+                                            closeMobileMenu()
                                         }
                                     }}
                                 >
@@ -52,7 +56,7 @@ const MobileMenu = ({ isOpen, navItems, setIsMobileMenuOpen }) => {
                             {item.hasChildren && expandedItems[index] && (
                                 <div className="mobile-submenu">
                                     <div className="mobile-submenu-header">
-                                        <span className="mobile-submenu-title"><Link to='/services' onClick={closeMobileMenu}>{item.title.toUpperCase()} &rarr;</Link></span>
+                                        <span className="mobile-submenu-title"><Link to={item.path} onClick={closeMobileMenu}>{item.title.toUpperCase()} &rarr;</Link></span>
                                     </div>
                                     <ul className="mobile-submenu-list">
                                         {item.children.map((child, childIndex) => (
